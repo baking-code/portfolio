@@ -3,6 +3,7 @@
     <header-bar />
     <div class="body">
       <intro />
+      <experience-block />
     </div>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Intro from "@/components/Intro";
 import HeaderBar from "@/components/HeaderBar";
+import ExperienceBlock from "@/components/ExperienceBlock";
 
 export default {
   name: "app",
   components: {
     Intro,
-    HeaderBar
+    HeaderBar,
+    ExperienceBlock
   }
 };
 </script>

@@ -5912,6 +5912,12 @@ vue@^2.5.2:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.2.tgz#fd367a87bae7535e47f9dc5c9ec3b496e5feb5a4"
 
+vuewordcloud@^17.10.18:
+  version "17.10.18"
+  resolved "https://registry.yarnpkg.com/vuewordcloud/-/vuewordcloud-17.10.18.tgz#590adb4627bc9c19fefedaadbeebe81ea15725e1"
+  dependencies:
+    vue "^2.5.2"
+
 watchpack@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.4.0.tgz#4a1472bcbb952bd0a9bb4036801f954dfb39faac"
