@@ -3,7 +3,15 @@
     <header-bar />
     <div class="body">
       <intro />
-      <experience-block />
+      <div v-for="(item, key) in experience" :key="key">
+        <experience-block
+          :words="item.words"
+          :company="item.company"
+          :date="item.date"
+          :role="item.role"
+          :description="item.description"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -13,19 +21,24 @@ import Intro from "@/components/Intro";
 import HeaderBar from "@/components/HeaderBar";
 import ExperienceBlock from "@/components/ExperienceBlock";
 
+import data from "@/assets/data";
+
 export default {
   name: "app",
   components: {
     Intro,
     HeaderBar,
     ExperienceBlock
+  },
+  data() {
+    return data;
   }
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
