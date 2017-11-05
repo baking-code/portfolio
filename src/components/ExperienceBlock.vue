@@ -4,11 +4,11 @@
       <span>{{ company }}</span>
       <span class="subtitle">{{ role }} - {{ date }}</span>
     </div>
-    <div class="cloud" v-show="toggleOn" v-on:click="onToggleCloud">
+    <div class="cloud" v-if="toggleOn" v-on:click="onToggleCloud">
       <vue-word-cloud :words="words" color="#fffde7" rotation=0 font-family="Avenir">
     </vue-word-cloud>
     </div>
-    <div class="description" v-show="!toggleOn" v-on:click="onToggleCloud">
+    <div class="description" v-if="!toggleOn" v-on:click="onToggleCloud">
       <ul>
         <li v-for="(item, key) in description" :key="key">
           {{ item }}
