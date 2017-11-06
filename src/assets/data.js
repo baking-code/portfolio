@@ -1,6 +1,6 @@
 export default {
-  experience: {
-    ripjar: {
+  experience: [
+    {
       words: [
         {
           text: "javascript",
@@ -42,5 +42,46 @@ export default {
         "Upskilling others in version control techniques",
       ],
     },
-  },
+    {
+      words: [
+        {
+          text: "asp.net",
+          weight: 10,
+        },
+        {
+          text: "javscript",
+          weight: 8,
+        },
+        {
+          text: "python",
+          weight: 6,
+        },
+        {
+          text: "c#",
+          weight: 12,
+        },
+        {
+          text: "geosystems",
+          weight: 4,
+        },
+        {
+          text: "java",
+          weight: 10,
+        },
+        {
+          text: "git",
+          weight: 6,
+        },
+      ],
+      company: "Helyx SIS",
+      date: "2015 - 2016",
+      role: "Software Developer",
+      description: [
+        "Software developer integrating geo capability into existing systems",
+        "Porting old VB6 system to use modern technologies",
+        "Introduction of version control to company",
+        "Simultaneously working with different technology stacks acorss different projects",
+      ],
+    },
+  ],
 };

@@ -44,7 +44,7 @@ export default {
       required: true
     },
     description: {
-      type: String,
+      type: Array,
       required: true
     }
   },
@@ -70,6 +70,7 @@ export default {
   color: #fffde7;
   padding: 10px;
   height: 250px;
+  margin: 10px 0;
 }
 
 .title {
