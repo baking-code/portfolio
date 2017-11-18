@@ -4,16 +4,18 @@
       <span>{{ company }}</span>
       <span class="subtitle">{{ role }} - {{ date }}</span>
     </div>
-    <div class="cloud" v-if="toggleOn" v-on:click="onToggleCloud">
-      <vue-word-cloud :words="words" color="#fffde7" rotation=0 font-family="Avenir">
-    </vue-word-cloud>
-    </div>
-    <div class="description" v-if="!toggleOn" v-on:click="onToggleCloud">
-      <ul>
-        <li v-for="(item, key) in description" :key="key">
-          {{ item }}
-        </li>
-      </ul>
+    <div class="container" :class="{ slide: toggleOn }" v-on:click="onToggleCloud">
+      <div class="description">
+        <ul>
+          <li v-for="(item, key) in description" :key="key">
+            {{ item }}
+          </li>
+        </ul>
+      </div>
+      <div class="cloud">
+        <vue-word-cloud :words="words" color="#fffde7" rotation=0 font-family="Avenir">
+        </vue-word-cloud>
+      </div>
     </div>
   </div>
 </template>
@@ -50,7 +52,7 @@ export default {
   },
   data() {
     return {
-      toggleOn: true
+      toggleOn: false
     };
   },
   methods: {
@@ -68,9 +70,8 @@ export default {
   flex-direction: column;
   background: #7b1fa2;
   color: #fffde7;
-  padding: 10px;
-  height: 250px;
-  margin: 10px 0;
+  padding: 10px 0;
+  height: 300px;
 }
 
 .title {
@@ -78,23 +79,35 @@ export default {
   flex-direction: column;
   align-items: center;
   border-bottom: 1px solid #fffde7;
-  height: 60px;
+  min-height: 60px;
   font-size: large;
 }
 
 .subtitle {
-  font-size: medium;
+  font-size: 17px;
 }
 
 .cloud {
   height: 150px;
-  padding: 20px 0;
+  padding: 45px 0;
   cursor: pointer;
+  width: 575px;
 }
 
 .description {
   text-align: left;
   padding: 20px 0;
   cursor: pointer;
+  width: 575px;
+}
+
+.container {
+  display: flex;
+  width: 1150px;
+  transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.slide {
+  transform: translateX(-50%);
 }
 </style>
