@@ -11,7 +11,7 @@ export default {
     return {
       name: "Benjamin King"
     };
-  },
+  }
 };
 </script>
 
@@ -24,7 +24,7 @@ export default {
   align-items: center;
   height: 60px;
   width: 100%;
-  font-size: 26px;
+  font-size: 30px;
   color: white;
   font-weight: 500;
 }

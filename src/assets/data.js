@@ -30,6 +30,10 @@ export default {
           text: "backbone",
           weight: 6,
         },
+        {
+          text: "nodejs",
+          weight: 6,
+        },
       ],
       company: "Ripjar",
       date: "2016 - present",
@@ -38,7 +42,7 @@ export default {
         "Front end developer on new and existing products",
         "Involved in full lifecycle of project",
         "Promotion of leading web technologies including React, webpack and ES6",
-        "Liasing with UX designer whilst leading a small team of junior developers",
+        "Liasing with UX designer whilst leading a team of junior developers",
         "Upskilling others in version control techniques",
       ],
     },
@@ -49,7 +53,7 @@ export default {
           weight: 10,
         },
         {
-          text: "javscript",
+          text: "javascript",
           weight: 8,
         },
         {
@@ -81,6 +85,48 @@ export default {
         "Porting old VB6 system to use modern technologies",
         "Introduction of version control to company",
         "Simultaneously working with different technology stacks acorss different projects",
+      ],
+    },
+    {
+      words: [
+        {
+          text: "java",
+          weight: 14,
+        },
+        {
+          text: "javascript",
+          weight: 6,
+        },
+        {
+          text: "network graph",
+          weight: 6,
+        },
+        {
+          text: "angular js",
+          weight: 6,
+        },
+        {
+          text: "desktop app",
+          weight: 10,
+        },
+        {
+          text: "c++",
+          weight: 8,
+        },
+        {
+          text: "neo4j",
+          weight: 4,
+        },
+      ],
+      company: "BAE Systems Detica",
+      date: "2012 - 2015",
+      role: "Graduate Software Developer",
+      description: [
+        "Provided support of long running desktop application",
+        "Built upon existing Java framework for analysis of network graphs",
+        "Followed best practices for version control and continuous deployment",
+        "Research project analysing website content using Natural Language Processing",
+        "Curated queryable data platform for rich scenario based content",
       ],
     },
   ],

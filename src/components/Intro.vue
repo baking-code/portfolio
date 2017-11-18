@@ -9,9 +9,10 @@ export default {
   name: "intro",
   data() {
     return {
-      msg: "I am a software developer with five years' professional experience based in the Cheltenham area. My current passions lie in web development and javascript. Outside of tech, I am an active person and enjoy football, bouldering and cycling.",
+      msg:
+        "I am a software developer with five years' professional experience based in the Cheltenham area. My current passions lie in web development and javascript. Outside of tech, I am an active person and enjoy football, bouldering and cycling."
     };
-  },
+  }
 };
 </script>
 
@@ -23,5 +24,6 @@ export default {
 
 .text {
   word-wrap: normal;
+  font-weight: 400;
 }
 </style>

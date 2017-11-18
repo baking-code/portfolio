@@ -3,7 +3,7 @@
     <header-bar />
     <div class="body">
       <intro />
-      <div v-for="(item, key) in experience" :key="key">
+      <div v-for="(item, key) in experience" :key="key" class="experience">
         <experience-block
           :words="item.words"
           :company="item.company"
@@ -46,12 +46,16 @@ export default {
   margin: 0 auto;
   height: 842px;
   width: 595px;
-  border: 1px solid #7b1fa2;
+  font-size: 18px;
 }
 
 .body {
   display: flex;
   flex-direction: column;
+}
+
+.experience {
+  margin: 10px;
 }
 </style>
 
