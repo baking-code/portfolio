@@ -5,16 +5,16 @@
       <span class="subtitle">{{ role }} - {{ date }}</span>
     </div>
     <div class="container" :class="{ slide: toggleOn }" v-on:click="onToggleCloud">
+      <div class="cloud">
+        <vue-word-cloud :words="words" color="#fffde7" rotation=0 font-family="Avenir">
+        </vue-word-cloud>
+      </div>
       <div class="description">
         <ul>
           <li v-for="(item, key) in description" :key="key">
             {{ item }}
           </li>
         </ul>
-      </div>
-      <div class="cloud">
-        <vue-word-cloud :words="words" color="#fffde7" rotation=0 font-family="Avenir">
-        </vue-word-cloud>
       </div>
     </div>
   </div>
@@ -71,7 +71,7 @@ export default {
   background: #7b1fa2;
   color: #fffde7;
   padding: 10px 0;
-  height: 300px;
+  max-height: 300px;
 }
 
 .title {
@@ -105,9 +105,20 @@ export default {
   display: flex;
   width: 1150px;
   transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+  overflow: hidden;
 }
 
 .slide {
   transform: translateX(-50%);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 2s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

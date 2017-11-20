@@ -3,7 +3,7 @@
     <header-bar />
     <div class="body">
       <intro />
-      <div v-for="(item, key) in experience" :key="key" class="experience">
+      <div v-for="(item, key) in data.experience" :key="key" class="experience" >
         <experience-block
           :words="item.words"
           :company="item.company"
@@ -31,12 +31,19 @@ export default {
     ExperienceBlock
   },
   data() {
-    return data;
+    return { data, delayFinished: false };
+  },
+  mounted() {
+    setTimeout(() => {
+      document
+        .querySelectorAll(".experience")
+        .forEach(e => e.classList.add("fade-in"));
+    }, 100);
   }
 };
 </script>
 
-<style>
+<style lang="scss">
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,6 +63,34 @@ export default {
 
 .experience {
   margin: 10px;
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 200ms;
+  animation-fill-mode: backwards;
+}
+
+.fade-in:nth-child(3) {
+  animation-delay: 100ms;
+}
+
+.fade-in:nth-child(4) {
+  animation-delay: 200ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
 }
 </style>
 
