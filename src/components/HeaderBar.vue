@@ -22,9 +22,9 @@ export default {
   background-color: #7b1fa2;
   justify-content: center;
   align-items: center;
-  height: 60px;
+  height: 80px;
   width: 100%;
-  font-size: 30px;
+  font-size: 36px;
   color: white;
   font-weight: 500;
 }

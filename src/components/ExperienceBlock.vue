@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="title">
       <span>{{ company }}</span>
-      <span class="subtitle">{{ role }} - {{ date }}</span>
+      <span class="subtitle">{{ role }} ({{ date }}</span>
     </div>
     <div class="container" :class="{ slide: toggleOn }" v-on:click="onToggleCloud">
       <div class="cloud">
@@ -71,7 +71,9 @@ export default {
   background: #7b1fa2;
   color: #fffde7;
   padding: 10px 0;
-  max-height: 300px;
+  height: 330px;
+  width: 475px;
+  overflow: hidden;
 }
 
 .title {
@@ -91,22 +93,20 @@ export default {
   height: 150px;
   padding: 45px 0;
   cursor: pointer;
-  width: 575px;
+  width: 475px;
 }
 
 .description {
   text-align: left;
-  padding: 20px 0;
   cursor: pointer;
-  width: 575px;
+  width: 475px;
 }
 
 .container {
   display: flex;
-  width: 1150px;
+  width: 950px;
   transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
-  overflow: hidden;
 }
 
 .slide {

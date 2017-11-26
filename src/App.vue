@@ -3,14 +3,19 @@
     <header-bar />
     <div class="body">
       <intro />
-      <div v-for="(item, key) in data.experience" :key="key" class="experience" >
-        <experience-block
-          :words="item.words"
-          :company="item.company"
-          :date="item.date"
-          :role="item.role"
-          :description="item.description"
-        />
+      <div class="grid">
+        <div v-for="(item, key) in data.experience" :key="key" class="grid-item experience" >
+          <experience-block
+            :words="item.words"
+            :company="item.company"
+            :date="item.date"
+            :role="item.role"
+            :description="item.description"
+          />
+        </div>
+        <div class="grid-item other">
+          Email, linkedIn, qualifications, education
+        </div>
       </div>
     </div>
   </div>
@@ -36,7 +41,7 @@ export default {
   mounted() {
     setTimeout(() => {
       document
-        .querySelectorAll(".experience")
+        .querySelectorAll(".grid-item")
         .forEach(e => e.classList.add("fade-in"));
     }, 100);
   }
@@ -52,7 +57,7 @@ export default {
   color: rgba(74, 2, 87, 0.8);
   margin: 0 auto;
   height: 842px;
-  width: 595px;
+  width: 990px;
   font-size: 18px;
 }
 
@@ -61,9 +66,22 @@ export default {
   flex-direction: column;
 }
 
-.experience {
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid-item {
   margin: 10px;
   opacity: 0;
+  width: 475px;
+  border-radius: 2px;
+}
+
+.other {
+  border: 1px solid #7b1fa2;
+  height: auto;
+  width: 473px;
 }
 
 .fade-in {
