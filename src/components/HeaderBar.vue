@@ -27,6 +27,7 @@ export default {
   font-size: 36px;
   color: white;
   font-weight: 500;
+  border-radius: 2px;
 }
 
 .text {

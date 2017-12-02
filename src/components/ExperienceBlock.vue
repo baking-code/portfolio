@@ -2,7 +2,7 @@
   <div class="wrapper">
     <div class="title">
       <span>{{ company }}</span>
-      <span class="subtitle">{{ role }} ({{ date }}</span>
+      <span class="subtitle">{{ role }} ({{ date }})</span>
     </div>
     <div class="container" :class="{ slide: toggleOn }" v-on:click="onToggleCloud">
       <div class="cloud">
@@ -74,6 +74,7 @@ export default {
   height: 330px;
   width: 475px;
   overflow: hidden;
+  border-radius: 2px;
 }
 
 .title {
@@ -100,6 +101,7 @@ export default {
   text-align: left;
   cursor: pointer;
   width: 475px;
+  padding: 0 10px;
 }
 
 .container {

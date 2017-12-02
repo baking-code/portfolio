@@ -13,9 +13,9 @@
             :description="item.description"
           />
         </div>
-        <div class="grid-item other">
-          Email, linkedIn, qualifications, education
-        </div>
+       <div class="grid-item">
+        <other-info />
+       </div>
       </div>
     </div>
   </div>
@@ -25,6 +25,7 @@
 import Intro from "@/components/Intro";
 import HeaderBar from "@/components/HeaderBar";
 import ExperienceBlock from "@/components/ExperienceBlock";
+import OtherInfo from "@/components/OtherInfo";
 
 import data from "@/assets/data";
 
@@ -33,7 +34,8 @@ export default {
   components: {
     Intro,
     HeaderBar,
-    ExperienceBlock
+    ExperienceBlock,
+    OtherInfo
   },
   data() {
     return { data, delayFinished: false };
@@ -76,12 +78,6 @@ export default {
   opacity: 0;
   width: 475px;
   border-radius: 2px;
-}
-
-.other {
-  border: 1px solid #7b1fa2;
-  height: auto;
-  width: 473px;
 }
 
 .fade-in {
