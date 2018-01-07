@@ -23,11 +23,17 @@ export default {
   justify-content: center;
   align-items: center;
   height: 80px;
-  width: 100%;
   font-size: 36px;
   color: white;
   font-weight: 500;
   border-radius: 2px;
+}
+
+@media (min-width: 380px) {
+  .header {
+    font-size: 48px;
+    height: 100px;
+  }
 }
 
 .text {

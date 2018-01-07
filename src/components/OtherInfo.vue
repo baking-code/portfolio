@@ -45,7 +45,8 @@ export default {
 
 .other {
   text-align: left;
-  padding: 10px 10px;
+  padding: 0 10px;
+  font-size: 18px;
 }
 
 a:link,

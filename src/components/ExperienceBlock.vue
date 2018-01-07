@@ -72,7 +72,6 @@ export default {
   color: #fffde7;
   padding: 10px 0;
   height: 330px;
-  width: 475px;
   overflow: hidden;
   border-radius: 2px;
 }
@@ -94,21 +93,27 @@ export default {
   height: 150px;
   padding: 45px 0;
   cursor: pointer;
-  width: 475px;
 }
 
 .description {
   text-align: left;
   cursor: pointer;
-  width: 475px;
   padding: 0 10px;
 }
 
 .container {
   display: flex;
-  width: 950px;
   transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+}
+
+.container {
+  width: calc(200% - 16px);
+}
+
+.description, .cloud, .wrapper {
+  width: 475px;
+  font-size: 18px;
 }
 
 .slide {

@@ -13,7 +13,7 @@
             :description="item.description"
           />
         </div>
-       <div class="grid-item">
+       <div class="grid-item other-info">
         <other-info />
        </div>
       </div>
@@ -42,6 +42,11 @@ export default {
   },
   mounted() {
     setTimeout(() => {
+      const siteWidth = 525;
+      const scale = screen.width / siteWidth;
+      if (screen.width < 525) {
+        document.querySelector('meta[name="viewport"]').setAttribute("content", `width=${siteWidth}, initial-scale=${scale}`);
+      }
       document
         .querySelectorAll(".grid-item")
         .forEach(e => e.classList.add("fade-in"));
@@ -50,7 +55,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style>
+html, body {
+  height: 100%;
+}
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -58,14 +66,21 @@ export default {
   text-align: center;
   color: rgba(74, 2, 87, 0.8);
   margin: 0 auto;
-  height: 842px;
-  width: 990px;
-  font-size: 18px;
+  font-size: 20px;
+  width: calc(100vw - 16px);
+}
+
+@media (min-width: 692px) {
+  #app {
+    font-size: 24px;
+  }
 }
 
 .body {
   display: flex;
   flex-direction: column;
+  max-width: 1022px;
+  margin: 0 auto;
 }
 
 .grid {
@@ -73,11 +88,22 @@ export default {
   flex-wrap: wrap;
 }
 
+@media (max-width: 1022px) {
+  .grid {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}
+
 .grid-item {
   margin: 10px;
   opacity: 0;
   width: 475px;
   border-radius: 2px;
+}
+
+.other-info {
+  margin: 8px;
 }
 
 .fade-in {
