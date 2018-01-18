@@ -90,7 +90,7 @@ html, body {
 
 @media (max-width: 1022px) {
   .grid {
-    max-width: 480px;
+    max-width: 494px;
     margin: 0 auto;
   }
 }
