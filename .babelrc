@@ -1,9 +1,14 @@
 {
-  "presets": ["es2015", "stage-2", "react"],
-  "plugins": ["transform-runtime"],
-  "env": {
-    "production": {
-      "presets": ["minify"]
-    }
-  }
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "@emotion/react"
+        }
+      }
+    ]
+  ],
+  "plugins": ["xwind/babel", "@emotion/babel-plugin"]
 }
