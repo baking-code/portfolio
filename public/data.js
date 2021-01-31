@@ -132,8 +132,11 @@ export default {
   ],
   about: [
     {
+      description: ["Benjamin King, software developer"]
+    },
+    {
       description: [
-        "Hello there! My name is Ben and I am a software developer.",
+        "Hello there! My name is Ben and I am a full stack software developer.",
         "Based in Cheltenham, England, I am happily married and enjoy working from home with our little dog 🐾",
         "The majority of my recent experience lie in web development and javascript - the challenge involved in the presentation and consumption of potentially complex data is something that I enjoy"
       ]

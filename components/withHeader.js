@@ -4,27 +4,18 @@ import Link from "next/link";
 import xw, { cx } from "xwind";
 
 const HeaderBar = styled.header(xw`
-  absolute
+  sticky
   top-0
   w-full
 `);
 
-const Title = styled.span(xw`
-  text-gray-800
-  w-full
-  relative
-  flex justify-around
-  text-lg leading-5 font-bold
-  bg-white
-  h-12
-`);
-
 const Nav = styled.nav(xw`
-  flex justify-center items-center
+  flex justify-between items-center
   bg-emerald-500
   w-full
   relative
-  h-10
+  h-16
+  px-4 md:px-6
 `);
 
 const StyledLink = styled.a(props => ({
@@ -47,19 +38,23 @@ const pages = [
 
 const withHeader = Component => ({ className, children, ...props }) => {
   const { route } = useRouter();
-  console.log("ROUTE", route);
   return (
     <>
       <HeaderBar {...props} className={cx("group", className)}>
-        <Title>
-          <Link href="/">Benjamin King</Link>
-        </Title>
         <Nav>
-          {pages.map(({ href, label }) => (
-            <Link href={href} key={href} passHref>
-              <StyledLink currentRoute={href === route}>{label}</StyledLink>
-            </Link>
-          ))}
+          <Link href="/">
+            <a css={xw`block md:hidden`}>BK.</a>
+          </Link>
+          <Link href="/">
+            <a css={xw`hidden md:block`}>Benjamin King</a>
+          </Link>
+          <div>
+            {pages.map(({ href, label }) => (
+              <Link href={href} key={href} passHref>
+                <StyledLink currentRoute={href === route}>{label}</StyledLink>
+              </Link>
+            ))}
+          </div>
         </Nav>
       </HeaderBar>
       <Component {...props} />

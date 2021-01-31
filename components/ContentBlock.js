@@ -1,8 +1,5 @@
 import styled from "@emotion/styled";
-import { useRouter } from "next/router";
-import Link from "next/link";
 import xw, { cx } from "xwind";
-import data from "../static/data";
 
 const Content = styled.section(xw`
   p-8
@@ -10,7 +7,6 @@ const Content = styled.section(xw`
 
 const Article = styled.article(xw`
   max-w-3xl
-  flex-col items-start
   text-2xl text-gray-800 tracking-wide leading-relaxed
 `);
 

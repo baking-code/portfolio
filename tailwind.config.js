@@ -1,16 +1,19 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  darkMode: 'class',
+  darkMode: "class",
   theme: {
     extend: {
-      colors,
-    },
+      colors
+    }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/aspect-ratio"),
+    require("tailwindcss-css-filters")
+  ],
   // xwind options
   xwind: {
-    mode: 'objectstyles',
-  },
-}
+    mode: "objectstyles"
+  }
+};
