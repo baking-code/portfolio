@@ -7,6 +7,8 @@ const HeaderBar = styled.header(xw`
   sticky
   top-0
   w-full
+  z-10
+  h-16
 `);
 
 const Nav = styled.nav(xw`
@@ -20,8 +22,8 @@ const Nav = styled.nav(xw`
 
 const StyledLink = styled.a(props => ({
   ...xw`
-text-sm
-leading-5
+  leading-5
+  text-lg
 font-medium
 px-8
 hover:text-white
@@ -43,10 +45,10 @@ const withHeader = Component => ({ className, children, ...props }) => {
       <HeaderBar {...props} className={cx("group", className)}>
         <Nav>
           <Link href="/">
-            <a css={xw`block md:hidden`}>BK.</a>
+            <a css={xw`block md:hidden leading-5 text-lg`}>BK.</a>
           </Link>
           <Link href="/">
-            <a css={xw`hidden md:block`}>Benjamin King</a>
+            <a css={xw`hidden md:block leading-5 text-lg`}>Benjamin King</a>
           </Link>
           <div>
             {pages.map(({ href, label }) => (
