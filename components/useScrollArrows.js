@@ -32,28 +32,28 @@ function useScrollArrows(root = "body") {
       <Arrow
         css={{
           ...xw`
-        sticky bottom-0 right-0 h-12 w-12 ml-auto
+        sticky bottom-0 right-0
+        h-10 w-10 md:h-12 md:w-12
+        ml-auto
         fill-current text-gray-300
       `,
           visibility: atBottom ? "hidden" : "visible",
           animation: "arrowOpacity 3s ease-out infinite"
         }}
-        height={36}
-        width={36}
       />
     ),
     () => (
       <Arrow
         css={{
           ...xw`
-        sticky top-16 right-0 h-12 w-12 ml-auto
+        sticky top-16 right-0
+        h-10 w-10 md:h-12 md:w-12
+        ml-auto
         fill-current text-gray-300
         `,
           visibility: atTop ? "hidden" : "visible",
           animation: "arrowOpacity 3s ease-out infinite"
         }}
-        height={36}
-        width={36}
         up
       />
     )

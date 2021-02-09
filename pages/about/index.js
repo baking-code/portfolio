@@ -20,7 +20,7 @@ const About = () => {
       pt-12
       `}
         >
-          <p css={xw`text-4xl text-gray-800 tracking-wide`}>
+          <p css={xw`text-2xl md:text-4xl text-gray-800 tracking-wide`}>
             {data.about[0].description}
           </p>
           <Image

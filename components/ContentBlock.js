@@ -3,7 +3,8 @@ import xw, { cx } from "xwind";
 
 const Article = styled.article(xw`
   max-w-3xl
-  text-2xl text-gray-800 tracking-wide leading-relaxed
+  text-lg md:text-2xl
+  text-gray-800 tracking-wide leading-relaxed
 `);
 
 const Divider = styled.hr(() => ({

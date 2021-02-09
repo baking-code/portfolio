@@ -23,11 +23,13 @@ const Nav = styled.nav(xw`
 const StyledLink = styled.a(props => ({
   ...xw`
   leading-5
-  text-lg
-font-medium
-px-8
-hover:text-white
-cursor-pointer
+  text-sm md:text-lg
+  font-medium
+  px-4 md:px-8
+  py-5
+  hover:text-white
+  cursor-pointer
+  
 `,
   ...(props.currentRoute ? xw`text-gray-100` : xw`text-gray-800`)
 }));
@@ -50,7 +52,7 @@ const withHeader = Component => ({ className, children, ...props }) => {
           <Link href="/">
             <a css={xw`hidden md:block leading-5 text-lg`}>Benjamin King</a>
           </Link>
-          <div>
+          <div css={xw`h-16 flex items-center`}>
             {pages.map(({ href, label }) => (
               <Link href={href} key={href} passHref>
                 <StyledLink currentRoute={href === route}>{label}</StyledLink>

@@ -137,8 +137,9 @@ export default {
     {
       description: [
         "Hello there! My name is Ben and I am a full stack software developer.",
-        "Based in Cheltenham, England, I am happily married and enjoy working from home with our little dog 🐾",
-        "The majority of my recent experience lie in web development and javascript - the challenge involved in the presentation and consumption of potentially complex data is something that I enjoy"
+        "The majority of my recent experience lie in web development and javascript - the challenge involved in the presentation and consumption of potentially complex data is something that I enjoy",
+        "This website is built from scratch using the Next.js React framework"
+        // "Based in Cheltenham, England, I am happily married and enjoy working from home with our little dog 🐾",
       ]
     }
   ]
