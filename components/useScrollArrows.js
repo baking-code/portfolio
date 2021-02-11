@@ -37,9 +37,9 @@ function useScrollArrows(root = "body") {
         ml-auto
         fill-current text-gray-300
       `,
-          visibility: atBottom ? "hidden" : "visible",
           animation: "arrowOpacity 3s ease-out infinite"
         }}
+        style={{ visibility: atBottom ? "hidden" : "visible" }}
       />
     ),
     () => (
@@ -51,9 +51,9 @@ function useScrollArrows(root = "body") {
         ml-auto
         fill-current text-gray-300
         `,
-          visibility: atTop ? "hidden" : "visible",
           animation: "arrowOpacity 3s ease-out infinite"
         }}
+        style={{ visibility: atTop ? "hidden" : "visible" }}
         up
       />
     )
