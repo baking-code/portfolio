@@ -3,6 +3,44 @@ export default {
     {
       words: [
         {
+          text: "mentoring",
+          weight: 12
+        },
+        {
+          text: "kafka",
+          weight: 8
+        },
+        {
+          text: "ansible",
+          weight: 4
+        },
+        {
+          text: "jenkins",
+          weight: 10
+        },
+        {
+          text: "scrum",
+          weight: 6
+        },
+        {
+          text: "jira",
+          weight: 6
+        }
+      ],
+      company: "Ripjar",
+      date: "2019 - present",
+      role: "Technical Lead",
+      description: [
+        "Designing new microservives and components",
+        "Requirements gathering, task breakdown and sprint planning",
+        "Line management of several team members, mentoring and career progression",
+        "Responsibility over software delivery process",
+        "Recruitment lead for full-stack and front-end developers"
+      ]
+    },
+    {
+      words: [
+        {
           text: "javascript",
           weight: 15
         },
@@ -27,16 +65,16 @@ export default {
           weight: 10
         },
         {
-          text: "backbone",
+          text: "elasticsearch",
           weight: 6
         },
         {
-          text: "nodejs",
+          text: "mongodb",
           weight: 6
         }
       ],
       company: "Ripjar",
-      date: "2016 - present",
+      date: "2016 - 2019",
       role: "Senior Front-End Engineer",
       description: [
         "Front end developer on new and existing products",
