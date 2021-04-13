@@ -35,9 +35,9 @@ const StyledLink = styled.a(props => ({
 }));
 
 const pages = [
-  { href: "/about", label: "About me" },
-  { href: "/interests", label: "Interests" },
-  { href: "/experience", label: "Experience" }
+  { href: "/home", label: "Home" },
+  { href: "/experience", label: "Experience" },
+  { href: "/about", label: "About me" }
 ];
 
 const withHeader = Component => ({ className, children, ...props }) => {

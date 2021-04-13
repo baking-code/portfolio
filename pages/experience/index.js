@@ -13,7 +13,7 @@ const renderTimeline = index => (
         w-8
         hidden md:block
       `,
-      height: "calc(100vh - 90px)"
+      height: "calc(100vh - 100px)"
     }}
   >
     <div
@@ -53,7 +53,7 @@ const renderTimeline = index => (
 
 const Tech = ({ list = [] }) => (
   <ul
-    css={xw`px-8 py-2 mt-4 rounded border-emerald-500 border-4 border-opacity-50 flex`}
+    css={xw`px-8 py-2 mt-4 rounded border-emerald-500 border-4 border-opacity-50 flex flex-wrap`}
   >
     {list.map((item, key) => (
       <li key={key} css={xw`mx-2`}>
@@ -94,9 +94,11 @@ const About = () => {
             ...xw`
             grid grid-cols-1 justify-center items-center place-items-center
             space-y-20
-            max-w-screen-lg
+            max-w-screen-sm
+            md:max-w-screen-lg
             mx-auto
-            pt-12
+            pt-4
+            md:pt-12
             pb-8
           `
           }}
@@ -106,8 +108,8 @@ const About = () => {
               key={`exp-${i}`}
               id={`exp-${i}`}
               css={{
-                ...xw`flex flex-col`,
-                height: "calc(100vh - 8rem)",
+                ...xw`flex flex-col w-full`,
+                height: "calc(100vh)",
                 scrollSnapAlign: "start"
               }}
               className="expSection"

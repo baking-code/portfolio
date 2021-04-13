@@ -21,7 +21,7 @@ export default ({ className, content = [] }) => {
         <section
           key={i}
           css={xw`
-              p-8
+              m-8
             `}
         >
           <p>{text}</p>

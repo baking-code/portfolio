@@ -37,6 +37,7 @@ html {
   scroll-padding-top: 8rem;
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
+  font-size: 1.125em;
 }
 
 @media (min-width: 768px) {
