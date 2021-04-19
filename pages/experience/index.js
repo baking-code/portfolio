@@ -1,10 +1,10 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, useRef } from "react";
 import xw from "xwind";
 import withHeader from "../../components/withHeader";
 import ListSection from "../../components/ListSection";
 import data from "../../public/data";
 
-const renderTimeline = index => (
+const renderTimeline = (index, onClick) => (
   <aside
     css={{
       ...xw`
@@ -24,17 +24,26 @@ const renderTimeline = index => (
       {data.experience.map((exp, i) => (
         <div
           key={`timeline-${i}`}
-          css={xw`bg-transparent flex-grow relative bg-gray-100`}
+          css={{
+            ...xw`bg-transparent flex-grow relative bg-gray-100 cursor-pointer hover:bg-gray-200`,
+            ...(index === i
+              ? xw`text-gray-500`
+              : xw`text-gray-100 hover:text-gray-200`)
+          }}
+          onClick={() => onClick(i)}
         >
-          <span
+          <a
             css={{
               ...xw`absolute top-0 right-full w-16`,
-              ...(index === i ? xw`text-gray-500` : xw`text-gray-100`),
-              transition: "color 0.1s ease"
+              transition: "color 0.1s ease",
+              cursor: "pointer",
+              textDecoration: "none",
+              color: "inherit"
             }}
+            onClick={() => onClick(i)}
           >
             {exp.date}
-          </span>
+          </a>
         </div>
       ))}
       <div
@@ -43,8 +52,12 @@ const renderTimeline = index => (
           ...xw`bg-transparent flex-grow absolute`,
           ...xw`bg-emerald-500 w-4`,
           height: `${100 / data.experience.length}%`,
-          transition: "all 0.1s ease",
-          transform: `translateY(${index * 100}%)`
+          transition: "all 0.3s ease",
+          transform: `translateY(${index * 100}%)`,
+          cursor: "pointer"
+        }}
+        onClick={event => {
+          debugger;
         }}
       ></div>
     </div>
@@ -85,9 +98,20 @@ const About = () => {
       observer.disconnect();
     };
   }, []);
+
+  let refs = [];
+  data.experience.forEach((data, i) => {
+    refs[i] = useRef();
+  });
+
+  const onClick = index => {
+    const ref = refs[index];
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behaviour: "smooth" });
+    }
+  };
   return (
     <>
-      {renderTimeline(visibleIndex)}
       <div css={xw`container mx-auto relative flex`}>
         <main
           css={{
@@ -113,6 +137,7 @@ const About = () => {
                 scrollSnapAlign: "start"
               }}
               className="expSection"
+              ref={refs[i]}
             >
               <header
                 css={xw`
@@ -128,8 +153,9 @@ const About = () => {
             </section>
           ))}
         </main>
-        <div css={xw`w-0 md:w-20`} />
+        {/* <div css={xw`w-0 md:w-20`} /> */}
       </div>
+      {renderTimeline(visibleIndex, onClick)}
     </>
   );
 };
