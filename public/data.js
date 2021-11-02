@@ -43,7 +43,7 @@ export default {
         "Planning sprints; requirements gathering and task breakdown",
         "Line management of 5 team members including their mentoring and career progression",
         "Recruitment lead for full-stack and front-end developers",
-        "•	Responsibility for application with 40,000 users in the world’s biggest financial institutions"
+        "Responsibility for application with 40,000 users in the world’s biggest financial institutions"
       ]
     },
     {

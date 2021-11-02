@@ -17,9 +17,10 @@
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@emotion/babel-plugin": "11.0.0",
+    "@emotion/css": "^11.5.0",
     "autoprefixer": "10.0.2",
     "next": "latest",
-    "postcss": "8.1.10",
+    "postcss": "^8.3.6",
     "tailwindcss": "^2.0.1",
     "tailwindcss-css-filters": "^2.0.0",
     "xwind": "0.7.2"

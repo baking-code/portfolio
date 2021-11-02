@@ -14,9 +14,9 @@ text-emerald-500 w-4 bg-emerald-500 h-0.5
   marginLeft: "calc(50% - 0.5rem)" // w-4 === 1rem
 }));
 
-export default ({ className, content = [] }) => {
+export default ({ css, content = [] }) => {
   return (
-    <Article>
+    <Article css={css}>
       {content.map((text, i) => (
         <section
           key={i}
