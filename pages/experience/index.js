@@ -11,7 +11,7 @@ const renderTimeline = (index, onClick) => (
         fixed top-20 right-0
         ml-auto
         w-8
-        hidden md:block
+        hidden lg:block
       `,
       height: "calc(100vh - 100px)"
     }}

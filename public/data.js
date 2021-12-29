@@ -39,7 +39,7 @@ export default {
       date: "2019 - present",
       role: "Technical Lead",
       description: [
-        "Designing new microservives and components",
+        "Designing new microservices and components",
         "Planning sprints; requirements gathering and task breakdown",
         "Line management of 5 team members including their mentoring and career progression",
         "Recruitment lead for full-stack and front-end developers",
