@@ -1,0 +1,41 @@
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  scroll-snap-type: y mandatory;
+  scroll-padding-top: 8rem;
+  --scrollbarBG: #cfd8dc;
+  --thumbBG: #90a4ae;
+  font-size: 1.125em;
+  overflow-y: auto;
+  overflow-y: overlay;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+  height: 11px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: var(--bg-emerald-500);
+  border: 2px solid var(--thumbBG);
+}
+
+@media (min-width: 1080px) {
+  .scrollbar__custom::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+@keyframes arrowOpacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

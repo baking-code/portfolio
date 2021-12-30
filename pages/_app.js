@@ -3,6 +3,7 @@ import { Global } from "@emotion/react";
 import xw from "xwind";
 
 import "../styles/base.css";
+import "../styles/custom.css";
 
 function App({ Component, pageProps }) {
   return (

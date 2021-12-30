@@ -4,7 +4,11 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
-      colors
+      colors: {
+        bluey: colors.sky,
+        primary: colors.sky,
+        sky: colors.sky
+      }
     }
   },
   variants: {},
