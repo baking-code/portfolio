@@ -38,6 +38,20 @@ html {
   --scrollbarBG: #cfd8dc;
   --thumbBG: #90a4ae;
   font-size: 1.125em;
+  overflow-y: auto;
+  overflow-y: overlay;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+  height: 11px;
+  background-color: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: var(--bg-emerald-500);
+  border: 2px solid var(--thumbBG);
 }
 
 @media (min-width: 1080px) {

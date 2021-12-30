@@ -28,7 +28,7 @@ const renderTimeline = (index, onClick) => (
             ...xw`bg-transparent flex-grow relative bg-gray-100 cursor-pointer hover:bg-gray-200`,
             ...(index === i
               ? xw`text-gray-500`
-              : xw`text-gray-100 hover:text-gray-200`)
+              : xw`text-gray-200 hover:text-gray-300`)
           }}
           onClick={() => onClick(i)}
         >
@@ -56,9 +56,6 @@ const renderTimeline = (index, onClick) => (
           transform: `translateY(${index * 100}%)`,
           cursor: "pointer"
         }}
-        onClick={event => {
-          debugger;
-        }}
       ></div>
     </div>
   </aside>
@@ -84,7 +81,6 @@ const About = () => {
       (entries, observer) => {
         entries.forEach(entry => {
           const number = entry.target.id.split("-")[1];
-          // console.log(number, entry.isVisible);
           if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
             setVisibleIndex(+number);
           }
@@ -133,7 +129,7 @@ const About = () => {
               id={`exp-${i}`}
               css={{
                 ...xw`flex flex-col w-full`,
-                height: "calc(100vh)",
+                minHeight: "calc(100vh)",
                 scrollSnapAlign: "start"
               }}
               className="expSection"
@@ -153,7 +149,6 @@ const About = () => {
             </section>
           ))}
         </main>
-        {/* <div css={xw`w-0 md:w-20`} /> */}
       </div>
       {renderTimeline(visibleIndex, onClick)}
     </>

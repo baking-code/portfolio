@@ -2,16 +2,15 @@ import xw from "xwind";
 import { css, cx } from "@emotion/css";
 import Image from "next/image";
 import withHeader from "../../components/withHeader";
-import ContentBlock from "../../components/ContentBlock";
 import useScrollArrows from "../../components/useScrollArrows";
 import data from "../../public/data";
 
-const About = () => {
+const About = ({ cssProp }) => {
   const [Down, Up] = useScrollArrows();
   return (
     <>
-      <Up />
-      <div css={xw`container mx-auto relative`}>
+      <div css={{ ...xw`relative`, ...cssProp }}>
+        <Up />
         <main
           className={cx(
             css(xw`
@@ -19,8 +18,8 @@ const About = () => {
               space-y-20
               max-w-screen-lg
               mx-auto
-              pt-12
               md:px-16
+              container
               `),
             css`
               > * {
@@ -67,8 +66,8 @@ const About = () => {
             </p>
           ))}
         </main>
+        <Down />
       </div>
-      <Down />
     </>
   );
 };
