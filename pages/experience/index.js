@@ -50,7 +50,7 @@ const renderTimeline = (index, onClick) => (
         key={`timeline-fill`}
         css={{
           ...xw`bg-transparent flex-grow absolute`,
-          ...xw`bg-emerald-500 w-4`,
+          ...xw`bg-primary-600 w-4`,
           height: `${100 / data.experience.length}%`,
           transition: "all 0.3s ease",
           transform: `translateY(${index * 100}%)`,
@@ -63,7 +63,7 @@ const renderTimeline = (index, onClick) => (
 
 const Tech = ({ list = [] }) => (
   <ul
-    css={xw`px-8 py-2 mt-4 rounded border-emerald-500 border-4 border-opacity-50 flex flex-wrap`}
+    css={xw`px-8 py-2 mt-4 rounded border-primary-600 border-4 border-opacity-50 flex flex-wrap`}
   >
     {list.map((item, key) => (
       <li key={key} css={xw`mx-2`}>

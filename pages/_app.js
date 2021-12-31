@@ -17,6 +17,7 @@ function App({ Component, pageProps }) {
           ...xw`XWIND_GLOBAL`
         }}
       />
+      <div className="background linear-gradient"></div>
       <Component {...pageProps} />
     </>
   );

@@ -5,7 +5,7 @@ const List = styled.div(xw`
   max-w-3xl
   text-lg md:text-xl
   text-gray-800 tracking-wide leading-relaxed
-  rounded border-emerald-500 border-4 border-opacity-50
+  rounded border-primary-600 border-4 border-opacity-50
 `);
 
 export default ({ className, content = [], role = "", company = "" }) => {
@@ -15,7 +15,7 @@ export default ({ className, content = [], role = "", company = "" }) => {
         {content.map((text, i) => (
           <li
             key={i}
-            css={xw`
+            className={`
               px-8 py-2
               text-lg md:text-2xl
               list-disc list-outside

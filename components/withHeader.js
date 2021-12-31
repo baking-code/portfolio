@@ -13,7 +13,7 @@ const HeaderBar = styled.header(xw`
 
 const Nav = styled.nav(xw`
   flex justify-between items-center
-  bg-emerald-500
+  bg-primary-600
   w-full
   relative
   h-16

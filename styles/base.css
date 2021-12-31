@@ -50,7 +50,7 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: var(--bg-emerald-500);
+  background-color: var(--bg-primary-600);
   border: 2px solid var(--thumbBG);
 }
 

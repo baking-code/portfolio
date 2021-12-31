@@ -3,11 +3,17 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   scroll-snap-type: y mandatory;
   scroll-padding-top: 8rem;
-  --scrollbarBG: #cfd8dc;
-  --thumbBG: #90a4ae;
   font-size: 1.125em;
   overflow-y: auto;
   overflow-y: overlay;
+  --theme-bg: rgb(240, 249, 255);
+  --theme-darker: rgba(224, 242, 254, 0.5);
+  --theme-dark: rgba(195, 228, 245, 0.2);
+  --scrollbarBG: rgba(195, 228, 245, 0.8);
+  --thumbBG: rgb(2, 132, 199, 0.2);
+}
+body {
+  background: var(--theme-bg);
 }
 
 html::-webkit-scrollbar {
@@ -18,8 +24,8 @@ html::-webkit-scrollbar {
 
 html::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background-color: var(--bg-emerald-500);
-  border: 2px solid var(--thumbBG);
+  background-color: var(--thumbBG);
+  border: 2px solid transparent;
 }
 
 @media (min-width: 1080px) {
@@ -38,4 +44,44 @@ html::-webkit-scrollbar-thumb {
   100% {
     opacity: 1;
   }
+}
+
+.background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.linear-gradient {
+  background: linear-gradient(
+      calc(180deg - 20deg),
+      transparent 0%,
+      transparent 49.99%,
+      var(--theme-dark) 50%,
+      var(--theme-dark) 100%
+    ),
+    linear-gradient(
+      calc(180deg + 20deg),
+      transparent 0%,
+      transparent 49.99%,
+      var(--theme-darker) 50%,
+      var(--theme-darker) 100%
+    );
+}
+
+.radial-slopes {
+  background: radial-gradient(
+      circle at 100% 120%,
+      var(--theme-dark) 0%,
+      var(--theme-dark) 49.99%,
+      transparent 50%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 20% 100%,
+      var(--theme-darker) 0%,
+      var(--theme-darker) 49.99%,
+      transparent 50%,
+      transparent 100%
+    );
 }

@@ -9,7 +9,7 @@ const Article = styled.article(xw`
 
 const Divider = styled.hr(() => ({
   ...xw`
-text-emerald-500 w-4 bg-emerald-500 h-0.5
+text-primary-600 w-4 bg-primary-600 h-0.5
 `,
   marginLeft: "calc(50% - 0.5rem)" // w-4 === 1rem
 }));
