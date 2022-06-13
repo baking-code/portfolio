@@ -8,14 +8,14 @@ const List = styled.div(xw`
   rounded border-primary-600 border-4 border-opacity-50
 `);
 
-export default ({ className, content = [], role = "", company = "" }) => {
+const ListSection = ({ className, content = [], role = "", company = "" }) => {
   return (
     <List>
       <ul css={xw`pl-8`}>
         {content.map((text, i) => (
           <li
             key={i}
-            className={`
+            css={xw`
               px-8 py-2
               text-lg md:text-2xl
               list-disc list-outside
@@ -28,3 +28,5 @@ export default ({ className, content = [], role = "", company = "" }) => {
     </List>
   );
 };
+
+export default ListSection;
