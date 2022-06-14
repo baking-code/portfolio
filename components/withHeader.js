@@ -20,7 +20,7 @@ const Nav = styled.nav(xw`
   px-4 md:px-6
 `);
 
-const StyledLink = styled.a(props => ({
+const StyledLink = styled.a((props) => ({
   ...xw`
   leading-5
   text-sm md:text-lg
@@ -30,7 +30,7 @@ const StyledLink = styled.a(props => ({
   hover:text-white
   cursor-pointer
 `,
-  ...(props.currentRoute ? xw`text-gray-100` : xw`text-gray-800`)
+  ...(props.currentRoute ? xw`text-gray-100` : xw`text-gray-800`),
 }));
 
 function NavLink({ href, children }) {
@@ -66,11 +66,11 @@ const Revealed = styled.span`
 const pages = [
   { href: "/home", label: "Home" },
   { href: "/experience", label: "Experience" },
-  { href: "/about", label: "About me" }
+  // { href: "/about", label: "About me" }
 ];
 
 const withHeader =
-  Component =>
+  (Component) =>
   ({ className, children, ...props }) => {
     const { route } = useRouter();
     return (
