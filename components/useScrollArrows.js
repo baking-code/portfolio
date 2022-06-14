@@ -8,7 +8,7 @@ function useScrollArrows(root = "body") {
   const [atTop, setTop] = useState(false);
 
   useEffect(() => {
-    const onScroll = evt => {
+    const onScroll = (evt) => {
       if (
         window.innerHeight + window.scrollY >=
         document.body.offsetHeight - 10
@@ -36,8 +36,9 @@ function useScrollArrows(root = "body") {
         h-10 w-10 md:h-12 md:w-12
         ml-auto
         fill-current text-gray-300
+        z-10
       `,
-          animation: "arrowOpacity 3s ease-out infinite"
+          animation: "arrowOpacity 3s ease-out infinite",
         }}
         style={{ visibility: atBottom ? "hidden" : "visible" }}
       />
@@ -50,13 +51,14 @@ function useScrollArrows(root = "body") {
         h-10 w-10 md:h-12 md:w-12
         ml-auto
         fill-current text-gray-300
+        z-10
         `,
-          animation: "arrowOpacity 3s ease-out infinite"
+          animation: "arrowOpacity 3s ease-out infinite",
         }}
         style={{ visibility: atTop ? "hidden" : "visible" }}
         up
       />
-    )
+    ),
   ];
 }
 

@@ -85,3 +85,7 @@ html::-webkit-scrollbar-thumb {
       transparent 100%
     );
 }
+
+.homeImage {
+  background-image: url("/image3.jpg");
+}
