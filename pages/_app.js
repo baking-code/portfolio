@@ -14,7 +14,7 @@ function App({ Component, pageProps }) {
       <Global
         //keyframes + ring and shadow classes variables  ... to global styles
         styles={{
-          ...xw`XWIND_GLOBAL`
+          ...xw`XWIND_GLOBAL`,
         }}
       />
       <div className="background linear-gradient"></div>

@@ -3,6 +3,8 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import xw, { cx } from "xwind";
 
+import routes from "../pages/routes";
+
 const HeaderBar = styled.header(xw`
   sticky
   top-0
@@ -63,12 +65,6 @@ const Revealed = styled.span`
   }
 `;
 
-const pages = [
-  { href: "/home", label: "Home" },
-  { href: "/experience", label: "Experience" },
-  // { href: "/about", label: "About me" }
-];
-
 const withHeader =
   (Component) =>
   ({ className, children, ...props }) => {
@@ -77,18 +73,18 @@ const withHeader =
       <>
         <HeaderBar {...props} className={cx("group", className)}>
           <Nav>
-            <Link href="/">
+            <Link href="/home">
               <a css={xw`block md:hidden leading-5 text-lg cursor-pointer`}>
                 BK.
               </a>
             </Link>
-            <Link href="/">
+            <Link href="/home">
               <a css={xw`hidden md:block leading-5 text-lg cursor-pointer`}>
                 Benjamin King
               </a>
             </Link>
             <div css={xw`h-16 flex items-center`}>
-              {pages.map(({ href, label }) => (
+              {routes.map(({ href, label }) => (
                 <Link href={href} key={href} passHref>
                   <StyledLink currentRoute={href === route}>{label}</StyledLink>
                 </Link>
