@@ -31,9 +31,9 @@ const About = ({ cssProp }) => {
             <p
               css={xw`text-2xl md:text-4xl text-gray-800 tracking-wide col-span-2 px-16`}
             >
-              {data.about[0].description}
+              {data.home[0].description}
             </p>
-            {data.about[1].description.map((text, key) => (
+            {data.home[1].description.map((text, key) => (
               <p
                 key={key}
                 css={xw`text-lg md:text-2xl text-gray-800 tracking-wide col-span-2 px-16`}
