@@ -11,8 +11,9 @@
     "@emotion/react": "^11.1.1",
     "@emotion/styled": "11.0.0",
     "@tailwindcss/aspect-ratio": "^0.2.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react": "^18",
+    "react-dom": "^18",
+    "xwind": "^0.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -21,9 +22,8 @@
     "autoprefixer": "10.0.2",
     "next": "latest",
     "postcss": "^8.3.6",
-    "tailwindcss": "^2.0.1",
-    "tailwindcss-css-filters": "^2.0.0",
-    "xwind": "0.7.2"
+    "tailwindcss": "2.1.4",
+    "tailwindcss-css-filters": "^2.0.0"
   },
   "license": "MIT"
 }

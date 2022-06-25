@@ -10,27 +10,25 @@ colors.sky = {
   600: "#0284c7",
   700: "#0369a1",
   800: "#075985",
-  900: "#0c4a6e"
+  900: "#0c4a6e",
 };
-
-console.log("COL", colors.sky["600"]);
 
 module.exports = {
   darkMode: "class",
   theme: {
     extend: {
       colors: {
-        primary: colors.sky
-      }
-    }
+        primary: colors.sky,
+      },
+    },
   },
   variants: {},
   plugins: [
     require("@tailwindcss/aspect-ratio"),
-    require("tailwindcss-css-filters")
+    require("tailwindcss-css-filters"),
   ],
   // xwind options
   xwind: {
-    mode: "objectstyles"
-  }
+    mode: "objectstyles",
+  },
 };
