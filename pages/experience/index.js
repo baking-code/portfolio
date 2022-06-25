@@ -13,7 +13,7 @@ const renderTimeline = (index, onClick) => (
         w-8
         hidden lg:block
       `,
-      height: "calc(100vh - 100px)"
+      height: "calc(100vh - 100px)",
     }}
   >
     <div
@@ -28,7 +28,7 @@ const renderTimeline = (index, onClick) => (
             ...xw`bg-transparent flex-grow relative bg-gray-100 cursor-pointer hover:bg-gray-200`,
             ...(index === i
               ? xw`text-gray-500`
-              : xw`text-gray-200 hover:text-gray-300`)
+              : xw`text-gray-200 hover:text-gray-300`),
           }}
           onClick={() => onClick(i)}
         >
@@ -38,7 +38,7 @@ const renderTimeline = (index, onClick) => (
               transition: "color 0.1s ease",
               cursor: "pointer",
               textDecoration: "none",
-              color: "inherit"
+              color: "inherit",
             }}
             onClick={() => onClick(i)}
           >
@@ -54,7 +54,7 @@ const renderTimeline = (index, onClick) => (
           height: `${100 / data.experience.length}%`,
           transition: "all 0.3s ease",
           transform: `translateY(${index * 100}%)`,
-          cursor: "pointer"
+          cursor: "pointer",
         }}
       ></div>
     </div>
@@ -79,7 +79,7 @@ const About = () => {
     document.querySelector("body").classList.add("scrollbar__custom");
     const observer = new IntersectionObserver(
       (entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           const number = entry.target.id.split("-")[1];
           if (entry.isIntersecting && entry.intersectionRatio > 0.01) {
             setVisibleIndex(+number);
@@ -88,7 +88,9 @@ const About = () => {
       },
       { threshold: [0.5, 1], rootMargin: "0px 0px -120px 0px" }
     );
-    document.querySelectorAll(".expSection").forEach(e => observer.observe(e));
+    document
+      .querySelectorAll(".expSection")
+      .forEach((e) => observer.observe(e));
     return () => {
       document.querySelector("body").classList.remove("scrollbar__custom");
       observer.disconnect();
@@ -100,7 +102,7 @@ const About = () => {
     refs[i] = useRef();
   });
 
-  const onClick = index => {
+  const onClick = (index) => {
     const ref = refs[index];
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behaviour: "smooth" });
@@ -120,7 +122,7 @@ const About = () => {
             pt-4
             md:pt-12
             pb-8
-          `
+          `,
           }}
         >
           {data.experience.map((exp, i) => (
@@ -130,7 +132,7 @@ const About = () => {
               css={{
                 ...xw`flex flex-col w-full`,
                 minHeight: "calc(100vh)",
-                scrollSnapAlign: "start"
+                scrollSnapAlign: "start",
               }}
               className="expSection"
               ref={refs[i]}
@@ -138,10 +140,14 @@ const About = () => {
               <header
                 css={xw`
                 text-lg md:text-xl font-bold
-                px-8 py-4
+                px-1 md:px-8 py-4
+                flex justify-between items-baseline
               `}
               >
-                {exp.company} &#8212; {exp.role}
+                <span>
+                  {exp.company} &#8212; {exp.role}
+                </span>
+                <span css={xw`text-sm italic lg:hidden`}>{exp.date}</span>
               </header>
               <ListSection content={exp.description} />
               <Tech list={exp.words} />
