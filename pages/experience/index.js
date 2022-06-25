@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import xw from "xwind";
 import withHeader from "../../components/withHeader";
 import ListSection from "../../components/ListSection";
@@ -75,7 +75,7 @@ const Tech = ({ list = [] }) => (
 
 const About = () => {
   const [visibleIndex, setVisibleIndex] = useState(0);
-  useLayoutEffect(() => {
+  useEffect(() => {
     document.querySelector("body").classList.add("scrollbar__custom");
     const observer = new IntersectionObserver(
       (entries, observer) => {
