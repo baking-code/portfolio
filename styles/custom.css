@@ -87,5 +87,13 @@ html::-webkit-scrollbar-thumb {
 }
 
 .homeImage {
-  background-image: url("/image3.jpg");
+  background-image: url("/static/image3.jpg");
+}
+
+.clipped {
+  clip-path: inset(0);
+}
+
+.fixed {
+  position: fixed !important;
 }

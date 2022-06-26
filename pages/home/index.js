@@ -1,4 +1,6 @@
 import xw from "xwind";
+import Image from "next/image";
+import profilePic from "../../public/image3.jpg";
 import withHeader from "../../components/withHeader";
 import useScrollArrows from "../../components/useScrollArrows";
 import data from "../../public/data";
@@ -10,16 +12,30 @@ const About = ({ cssProp }) => {
       <div css={{ ...xw`relative`, ...cssProp }}>
         <Up />
         <main css={xw`relative -top-16`}>
-          <section
-            css={xw`flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover`}
-            className="homeImage"
+          <div
+            css={xw`absolute z-10 h-screen w-screen
+                flex justify-center items-center
+              `}
           >
-            <div
-              css={xw`p-5 text-2xl text-white bg-primary-300 bg-opacity-80 rounded-xl`}
+            <h3
+              css={xw`text-2xl text-white p-5 bg-primary-300 bg-opacity-80 rounded-xl text-center`}
             >
               Jack of all trades, master of <em>some.</em>
-            </div>
-          </section>
+            </h3>
+          </div>
+          <div
+            className={"clipped"}
+            css={xw`w-screen h-screen relative overflow-hidden z-0`}
+          >
+            <Image
+              alt="Mountains"
+              src={profilePic}
+              layout="fill"
+              objectFit="cover"
+              quality={100}
+              className="fixed"
+            />
+          </div>
           <section
             css={xw`grid grid-cols-1 justify-center items-center place-items-center
             space-y-20
@@ -29,7 +45,7 @@ const About = ({ cssProp }) => {
           `}
           >
             <p
-              css={xw`text-2xl md:text-4xl text-gray-800 tracking-wide col-span-2 px-16`}
+              css={xw`text-2xl md:text-4xl text-gray-800 tracking-wide col-span-2 px-16 pt-16`}
             >
               {data.home[0].description}
             </p>
