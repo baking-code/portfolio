@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import routes from "./routes";
+import routes from "../components/routes";
 
 const urls = routes.map((p) => p.href);
 export async function middleware(req, ev) {

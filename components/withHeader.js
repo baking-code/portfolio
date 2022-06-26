@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import xw, { cx } from "xwind";
 
-import routes from "../pages/routes";
+import routes from "./routes";
 
 const HeaderBar = styled.header(xw`
   sticky
