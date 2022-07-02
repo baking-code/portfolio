@@ -9,7 +9,7 @@ const About = ({ cssProp }) => {
   const [Down, Up] = useScrollArrows();
   return (
     <>
-      <div css={{ ...xw`relative`, ...cssProp }}>
+      <div css={{ ...xw`relative z-0`, ...cssProp }}>
         <Up />
         <main css={xw`relative -top-16`}>
           <div
@@ -30,10 +30,11 @@ const About = ({ cssProp }) => {
             <Image
               alt="Mountains"
               src={profilePic}
-              layout="fill"
+              layout="responsive"
               objectFit="cover"
               quality={100}
               className="fixed"
+              placeholder="blur"
             />
           </div>
           <section

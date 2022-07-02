@@ -22,48 +22,51 @@ const Nav = styled.nav(xw`
   px-4 md:px-6
 `);
 
-const StyledLink = styled.a((props) => ({
-  ...xw`
+const linkStyle = xw`
   leading-5
   text-sm md:text-lg
   font-medium
   px-4 md:px-8
   py-5
-  hover:text-white
   cursor-pointer
-`,
-  ...(props.currentRoute ? xw`text-gray-100` : xw`text-gray-800`),
-}));
+  relative
+  block
+  `;
 
-function NavLink({ href, children }) {
+const StyledLink = styled.a((props) => {
+  console.log("AAA", props);
+  return {
+    ...linkStyle,
+    ...(props.currentRoute
+      ? xw`text-gray-100 pointer-events-none`
+      : xw`text-gray-800`),
+  };
+});
+
+function NavLink({ href, children, currentRoute }) {
   return (
-    <NavLinkAnchor href={href}>
+    <StyledLink href={href} currentRoute={currentRoute}>
       {children}
       <Revealed aria-hidden={true}>{children}</Revealed>
-    </NavLinkAnchor>
+    </StyledLink>
   );
 }
-const NavLinkAnchor = styled.a`
-  display: block;
-  position: relative;
-  text-decoration: none;
-  color: inherit;
-  font-weight: 500;
-  font-size: 1.25rem;
-`;
-const Revealed = styled.span`
-  color: hsl(333deg 100% 50%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  filter: drop-shadow(0px 0px 4px white);
-  clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
-  transition: clip-path 1000ms;
-  ${NavLinkAnchor}:hover & {
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-    transition: clip-path 300ms;
-  }
-`;
+const Revealed = styled.span({
+  ...linkStyle,
+  ...xw`
+    text-white
+  `,
+  position: "absolute",
+  top: "0",
+  left: "0",
+  filter: "drop-shadow(0px 0px 4px white)",
+  clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
+  transition: "clip-path 800ms",
+  [`${StyledLink}:hover &`]: {
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    transition: "clip-path 500ms",
+  },
+});
 
 const withHeader =
   (Component) =>
@@ -86,7 +89,7 @@ const withHeader =
             <div css={xw`h-16 flex items-center`}>
               {routes.map(({ href, label }) => (
                 <Link href={href} key={href} passHref>
-                  <StyledLink currentRoute={href === route}>{label}</StyledLink>
+                  <NavLink currentRoute={href === route}>{label}</NavLink>
                 </Link>
               ))}
             </div>
