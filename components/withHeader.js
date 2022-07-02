@@ -33,15 +33,12 @@ const linkStyle = xw`
   block
   `;
 
-const StyledLink = styled.a((props) => {
-  console.log("AAA", props);
-  return {
-    ...linkStyle,
-    ...(props.currentRoute
-      ? xw`text-gray-100 pointer-events-none`
-      : xw`text-gray-800`),
-  };
-});
+const StyledLink = styled.a((props) => ({
+  ...linkStyle,
+  ...(props.currentRoute
+    ? xw`text-gray-100 pointer-events-none`
+    : xw`text-gray-800`),
+}));
 
 function NavLink({ href, children, currentRoute }) {
   return (
