@@ -17,6 +17,10 @@ export default {
           text: "system testing",
           weight: 4,
         },
+        {
+          text: "ci/cd",
+          weight: 4,
+        },
       ],
       company: "Ripjar",
       date: "2022 - present",
@@ -25,6 +29,7 @@ export default {
         "Designing and building next iteration of multi-tenant financial crime SaaS product",
         "Fleshing out system level tests and fitness functions",
         "Incorporating Typescript into new components and phasing into old ones",
+        "Revamped test automation and CI pipeline from Jenkins to docker and Github Actions"
       ],
     },
     {
