@@ -11,7 +11,7 @@ const About = ({ cssProp }) => {
     <>
       <div css={{ ...xw`relative z-0`, ...cssProp }}>
         <Up />
-        <main css={xw`relative -top-16`}>
+        <main css={xw`relative -top-16 overflow-y-hidden	`}>
           <div
             css={xw`absolute z-10 h-screen w-screen
                 flex justify-center items-center
