@@ -29,7 +29,7 @@ export default {
         "Designing and building next iteration of multi-tenant financial crime SaaS product",
         "Fleshing out system level tests and fitness functions",
         "Incorporating Typescript into new components and phasing into old ones",
-        "Revamped test automation and CI pipeline from Jenkins to docker and Github Actions"
+        "Revamped test automation and CI pipeline from Jenkins to docker and Github Actions",
       ],
     },
     {
@@ -209,6 +209,38 @@ export default {
         "Followed best practices for version control and continuous deployment",
         "Research project analysing website content using Natural Language Processing",
         "Curated queryable data platform for rich scenario based content",
+      ],
+    },
+    {
+      words: [
+        {
+          text: "golang",
+          weight: 14,
+        },
+        {
+          text: "nextjs",
+          weight: 6,
+        },
+        {
+          text: "tailwind",
+          weight: 6,
+        },
+        {
+          text: "vuejs",
+          weight: 6,
+        },
+        {
+          text: "firebase",
+          weight: 10,
+        },
+      ],
+      company: "Personal Projects",
+      date: "projects",
+      role: "",
+      description: [
+        "golang - built implementation of event-loop from JS",
+        "portfolio - this site! Using next.js, tailwind css",
+        "recipeasy - web app to share recipes using firebase as a data store",
       ],
     },
   ],

@@ -145,7 +145,7 @@ const About = () => {
               `}
               >
                 <span>
-                  {exp.company} &#8212; {exp.role}
+                  {exp.company} {exp.role && "\u2013"} {exp.role}
                 </span>
                 <span css={xw`text-sm italic lg:hidden`}>{exp.date}</span>
               </header>
