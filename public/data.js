@@ -238,7 +238,7 @@ export default {
       date: "projects",
       role: "",
       description: [
-        "golang - built implementation of event-loop from JS",
+        "golang - building implementation of event-loop from JS",
         "portfolio - this site! Using next.js, tailwind css",
         "recipeasy - web app to share recipes using firebase as a data store",
       ],
