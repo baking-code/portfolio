@@ -139,7 +139,7 @@ const PDFDocument = () => (
               {job.role && " - "}
               {job.role}
             </Text>
-            <Text style={styles.jobTitle}>{job.date}</Text>
+            <Text style={styles.jobTitle}>{job.role && job.date}</Text>
           </View>
           <View style={styles.layout.container}>
             {job.description.map((d) => (
@@ -158,7 +158,7 @@ const PDFDocument = () => (
       </View>
       <Text style={styles.sectionTitle}>Interests</Text>
       <View style={styles.layout.container}>
-        <Text>{data.about[1].description.join(" ")}</Text>
+        <Text>{data.about[1].description.join(". ")}</Text>
       </View>
     </Page>
   </Document>

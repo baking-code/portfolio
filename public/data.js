@@ -4,11 +4,13 @@ export default {
       words: [
         { text: "typescript", weight: 10 },
         { text: "architecture", weight: 6 },
+        { text: "design", weight: 6 },
         {
           text: "kafka",
           weight: 8,
         },
         { text: "events", weight: 4 },
+        { text: "microservices", weight: 4 },
         {
           text: "design",
           weight: 4,
@@ -23,7 +25,7 @@ export default {
         },
       ],
       company: "Ripjar",
-      date: "2022 - present",
+      date: "01/2022 - present",
       role: "Staff Engineer",
       description: [
         "Designing and building next iteration of multi-tenant financial crime SaaS product",
@@ -64,7 +66,7 @@ export default {
         },
       ],
       company: "Ripjar",
-      date: "2019 - 2022",
+      date: "09/2019 - 01/2022",
       role: "Technical Lead",
       description: [
         "Designing new microservices and components",
@@ -118,14 +120,14 @@ export default {
         },
       ],
       company: "Ripjar",
-      date: "2016 - 2019",
+      date: "04/2016 - 09/2019",
       role: "Senior Front-End Engineer",
       description: [
         "Design, development, testing and deployment of complex data driven applications",
         "Promotion of leading web technologies including React, webpack and ES6",
         "Liaising with UX designers",
         "Involvement with initial release of network intelligence application",
-        "Development lead of financial crime product’s user interface",
+        "Development lead of financial crime product's user interface",
         "Upskilling others in React, version control and modern javascript",
       ],
     },
@@ -161,7 +163,7 @@ export default {
         },
       ],
       company: "Helyx SIS",
-      date: "2015 - 2016",
+      date: "07/2015 - 04/2016",
       role: "Software Developer",
       description: [
         "Software developer integrating geo capability into existing systems",
@@ -201,7 +203,7 @@ export default {
         },
       ],
       company: "BAE Systems Detica",
-      date: "2012 - 2015",
+      date: "06/2012 - 07/2015",
       role: "Graduate Software Developer",
       description: [
         "Provided support of long running desktop application",
@@ -230,6 +232,14 @@ export default {
           weight: 6,
         },
         {
+          text: "aws",
+          weight: 6,
+        },
+        {
+          text: "kubernetes",
+          weight: 6,
+        },
+        {
           text: "firebase",
           weight: 10,
         },
@@ -238,8 +248,10 @@ export default {
       date: "projects",
       role: "",
       description: [
-        "golang - built implementation of event-loop from JS",
-        "portfolio - this site! Using next.js, tailwind css",
+        "golang - building various JS language constructs to aid learning",
+        "AWS - working towards certification",
+        "kubernetes - learning via O'Reilly",
+        "portfolio - this website/PDF, using next.js, tailwind css",
         "recipeasy - web app to share recipes using firebase as a data store",
       ],
     },
@@ -253,7 +265,7 @@ export default {
         "Hello there! My name is Ben and I am a full stack software developer.",
         "The majority of my recent experiences lie in web development and javascript. The challenge involved in the consumption and presentation of complex data is something that I enjoy.",
         "My current company Ripjar are a Series-B data intelligence scale up. I joined 2 years into their journey, and it has since grown over 6 times the size. I have led UI development of both their financial crime solution and data intelligence platform.",
-        "I love playing with technology. This website is built from scratch using the Next.js and tailwind, simply to try them out. 🎉",
+        "I love playing with technology. Making myself, and others around me, better at what they do is what inspires me. 🎉",
       ],
     },
   ],
@@ -273,7 +285,9 @@ export default {
   ],
   education: [
     {
-      description: ["Master of mathematics, University of Exeter (2:1)"],
+      description: [
+        "Master of mathematics, University of Exeter (2:1) 2009-2013",
+      ],
     },
   ],
 };

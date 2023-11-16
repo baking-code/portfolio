@@ -34,7 +34,7 @@ const renderTimeline = (index, onClick) => (
         >
           <a
             css={{
-              ...xw`absolute top-0 right-full w-16`,
+              ...xw`absolute top-0 right-full w-20`,
               transition: "color 0.1s ease",
               cursor: "pointer",
               textDecoration: "none",
@@ -63,7 +63,7 @@ const renderTimeline = (index, onClick) => (
 
 const Tech = ({ list = [] }) => (
   <ul
-    css={xw`px-8 py-2 mt-4 rounded border-primary-600 border-4 border-opacity-50 flex flex-wrap`}
+    css={xw`max-w-3xl px-8 py-2 mt-4 rounded border-primary-600 border-4 border-opacity-50 flex flex-wrap`}
   >
     {list.map((item, key) => (
       <li key={key} css={xw`mx-2`}>
