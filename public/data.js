@@ -248,9 +248,9 @@ export default {
       date: "projects",
       role: "",
       description: [
-        "golang - building various JS language constructs to aid learning",
-        "AWS - working towards certification",
-        "kubernetes - learning via O'Reilly",
+        "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go&sort=",
+        "godash - my first published go package https://github.com/baking-code/godash",
+        "AWS - working towards developer certification",
         "portfolio - this website/PDF, using next.js, tailwind css",
         "recipeasy - web app to share recipes using firebase as a data store",
       ],
