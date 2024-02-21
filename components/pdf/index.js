@@ -8,6 +8,7 @@ import {
   Document,
   StyleSheet,
 } from "@react-pdf/renderer";
+import { each, keyBy } from "lodash";
 import { theme } from "../../tailwind.config";
 import data from "../../public/data";
 
@@ -122,36 +123,7 @@ const PDFDocument = () => (
         <Text>{data.home[1].description.join(" ")}</Text>
       </View>
       <Text style={styles.sectionTitle}>Experience</Text>
-      {data.experience.map((job, index) => (
-        <View style={{ marginTop: 10 }}>
-          <View
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-              marginHorizontal: 20,
-              marginBottom: -18,
-            }}
-            break={index === 3}
-          >
-            <Text style={styles.jobTitle}>
-              {job.company}
-              {job.role && " - "}
-              {job.role}
-            </Text>
-            <Text style={styles.jobTitle}>{job.role && job.date}</Text>
-          </View>
-          <View style={styles.layout.container}>
-            {job.description.map((d) => (
-              <ListItem>{d}</ListItem>
-            ))}
-            <Text style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}>
-              {"Keywords: "}
-              {job.words.map((w) => w.text).join(" ")}
-            </Text>
-          </View>
-        </View>
-      ))}
+      {getExperience()}
       <Text style={styles.sectionTitle}>Education</Text>
       <View style={styles.layout.container}>
         <Text>{data.education[0].description.join(" ")}</Text>
@@ -164,3 +136,83 @@ const PDFDocument = () => (
   </Document>
 );
 export default PDFDocument;
+
+function getExperience() {
+  const expByKey = keyBy(data.experience, "company");
+  const toReturn = [];
+  each(expByKey, (items, key) => {
+    debugger;
+    if (data.jobs[key]) {
+      toReturn.push(
+        <View style={{ marginTop: 10 }}>
+          <View
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-between",
+              marginHorizontal: 20,
+              marginBottom: -18,
+            }}
+            break={index === 3}
+          >
+            <Text style={styles.jobTitle}>{job.company}</Text>
+            <Text style={styles.jobTitle}>{data.jobs[key]}</Text>
+          </View>
+          {items.map((job) => (
+            <View>
+              <Text style={styles.jobTitle}>{job.role}</Text>
+              <Text style={styles.jobTitle}>{job.date}</Text>
+              <View style={styles.layout.container}>
+                {job.description.map((d) => (
+                  <ListItem>{d}</ListItem>
+                ))}
+                <Text
+                  style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}
+                >
+                  {"Keywords: "}
+                  {job.words.map((w) => w.text).join(" ")}
+                </Text>
+              </View>
+            </View>
+          ))}
+        </View>
+      );
+    } else {
+      toReturn.push(
+        ...items.map((job) => (
+          <View style={{ marginTop: 10 }}>
+            <View
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginHorizontal: 20,
+                marginBottom: -18,
+              }}
+              break={index === 3}
+            >
+              <Text style={styles.jobTitle}>
+                {job.company}
+                {job.role && " - "}
+                {job.role}
+              </Text>
+              <Text style={styles.jobTitle}>{job.role && job.date}</Text>
+            </View>
+            <View style={styles.layout.container}>
+              {job.description.map((d) => (
+                <ListItem>{d}</ListItem>
+              ))}
+              <Text
+                style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}
+              >
+                {"Keywords: "}
+                {job.words.map((w) => w.text).join(" ")}
+              </Text>
+            </View>
+          </View>
+        ))
+      );
+    }
+  });
+  return toReturn;
+}

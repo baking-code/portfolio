@@ -1,4 +1,7 @@
 export default {
+  jobs: {
+    Ripjar: "2016 - present",
+  },
   experience: [
     {
       words: [

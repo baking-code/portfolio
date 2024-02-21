@@ -21,31 +21,35 @@ const renderTimeline = (index, onClick) => (
             w-4 h-full flex flex-col
           `}
     >
-      {data.experience.map((exp, i) => (
-        <div
-          key={`timeline-${i}`}
-          css={{
-            ...xw`bg-transparent flex-grow relative bg-gray-100 cursor-pointer hover:bg-gray-200`,
-            ...(index === i
-              ? xw`text-gray-500`
-              : xw`text-gray-200 hover:text-gray-300`),
-          }}
-          onClick={() => onClick(i)}
-        >
-          <a
+      {data.experience.reduce((acc, item, i) => {
+        const getTL = (exp) => (
+          <div
+            key={`timeline-${i}`}
             css={{
-              ...xw`absolute top-0 right-full w-20`,
-              transition: "color 0.1s ease",
-              cursor: "pointer",
-              textDecoration: "none",
-              color: "inherit",
+              ...xw`bg-transparent flex-grow relative bg-gray-100 cursor-pointer hover:bg-gray-200`,
+              ...(index === i
+                ? xw`text-gray-500`
+                : xw`text-gray-200 hover:text-gray-300`),
             }}
             onClick={() => onClick(i)}
           >
-            {exp.date}
-          </a>
-        </div>
-      ))}
+            <a
+              css={{
+                ...xw`absolute top-0 right-full w-20`,
+                transition: "color 0.1s ease",
+                cursor: "pointer",
+                textDecoration: "none",
+                color: "inherit",
+              }}
+              onClick={() => onClick(i)}
+            >
+              {exp.date}
+            </a>
+          </div>
+        );
+        acc.push(getTL(item));
+        return acc;
+      }, [])}
       <div
         key={`timeline-fill`}
         css={{
