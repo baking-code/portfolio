@@ -15,15 +15,19 @@ export default {
         { text: "events", weight: 4 },
         { text: "microservices", weight: 4 },
         {
-          text: "design",
-          weight: 4,
-        },
-        {
-          text: "system testing",
+          text: "distributed systems",
           weight: 4,
         },
         {
           text: "ci/cd",
+          weight: 4,
+        },
+        {
+          text: "streaming",
+          weight: 4,
+        },
+        {
+          text: "github actions",
           weight: 4,
         },
       ],
@@ -31,9 +35,12 @@ export default {
       date: "01/2022 - present",
       role: "Staff Engineer",
       description: [
+        "Holistic technical responsibility over engineering teams and processes",
+        "Coordinating business, product and engineering roadmaps with senior stakeholders",
         "Designing and building next iteration of multi-tenant financial crime SaaS product",
         "Fleshing out system level tests and fitness functions",
-        "Incorporating Typescript into new components and phasing into old ones",
+        "Capturing performance metrics and monitoring",
+        "Improving developer experience and efficiency",
         "Revamped test automation and CI pipeline from Jenkins to docker and Github Actions",
       ],
     },
@@ -60,7 +67,19 @@ export default {
           weight: 6,
         },
         {
-          text: "jest",
+          text: "nodejs",
+          weight: 8,
+        },
+        {
+          text: "opensearch",
+          weight: 6,
+        },
+        {
+          text: "mongodb",
+          weight: 6,
+        },
+        {
+          text: "redis",
           weight: 6,
         },
         {
@@ -94,10 +113,6 @@ export default {
           weight: 12,
         },
         {
-          text: "nodejs",
-          weight: 8,
-        },
-        {
           text: "webpack",
           weight: 4,
         },
@@ -114,11 +129,11 @@ export default {
           weight: 10,
         },
         {
-          text: "elasticsearch",
+          text: "jest",
           weight: 6,
         },
         {
-          text: "mongodb",
+          text: "selenium",
           weight: 6,
         },
       ],
@@ -251,23 +266,23 @@ export default {
       date: "projects",
       role: "",
       description: [
-        "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go&sort=",
+        "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go",
         "godash - my first published go package https://github.com/baking-code/godash",
         "AWS - working towards developer certification",
-        "portfolio - this website/PDF, using next.js, tailwind css",
+        "portfolio - this website/PDF, using next.js, tailwind css, react pdf",
         "recipeasy - web app to share recipes using firebase as a data store",
       ],
     },
   ],
   home: [
     {
-      description: ["Benjamin King, software developer"],
+      description: ["Benjamin King, staff software engineer"],
     },
     {
       description: [
-        "Hello there! My name is Ben and I am a full stack software developer.",
-        "The majority of my recent experiences lie in web development and javascript. The challenge involved in the consumption and presentation of complex data is something that I enjoy.",
-        "My current company Ripjar are a Series-B data intelligence scale up. I joined 2 years into their journey, and it has since grown over 6 times the size. I have led UI development of both their financial crime solution and data intelligence platform.",
+        "Hello there! My name is Ben and I am a full stack staff software engineer.",
+        "The majority of my recent experiences lie in building complex data-driven applications. The challenge involved in the consumption and presentation of complex data is something that I enjoy.",
+        "My current company Ripjar are a Series-B data intelligence scale up. I joined 2 years into their journey, and it has since grown over 6 times the size. I have led UI development of both their financial crime solution and data analysis platform.",
         "I love playing with technology. Making myself, and others around me, better at what they do is what inspires me. 🎉",
       ],
     },

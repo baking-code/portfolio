@@ -8,7 +8,7 @@ import {
   Document,
   StyleSheet,
 } from "@react-pdf/renderer";
-import { each, keyBy } from "lodash";
+import { each, groupBy } from "lodash";
 import { theme } from "../../tailwind.config";
 import data from "../../public/data";
 
@@ -66,6 +66,13 @@ const styles = StyleSheet.create({
     color: textColor,
     fontSize: 12,
   },
+  roleTitle: {
+    color: textColor,
+    fontSize: 11,
+    fontWeight: "bold",
+    marginBottom: 5,
+    marginRight: 5,
+  },
   layout: {
     container: {
       color: textColor,
@@ -78,6 +85,11 @@ const styles = StyleSheet.create({
       borderBottomLeftRadius: 5,
       padding: 20,
       margin: 20,
+    },
+    subContainer: {
+      fontSize: 12,
+      padding: 5,
+      margin: 5,
     },
     row: {
       display: "flex",
@@ -116,6 +128,9 @@ const PDFDocument = () => (
           <Link src="http://benjaminallanking.com" style={styles.subtitle}>
             benjaminallanking.com
           </Link>
+          <Link src="https://github.com/baking-code" style={styles.subtitle}>
+            GitHub
+          </Link>
           <Text style={styles.subtitle}>07855535254</Text>
         </View>
       </View>
@@ -138,10 +153,11 @@ const PDFDocument = () => (
 export default PDFDocument;
 
 function getExperience() {
-  const expByKey = keyBy(data.experience, "company");
+  const expByKey = groupBy(data.experience, "company");
   const toReturn = [];
+  let index = 0;
   each(expByKey, (items, key) => {
-    debugger;
+    console.log(items);
     if (data.jobs[key]) {
       toReturn.push(
         <View style={{ marginTop: 10 }}>
@@ -153,16 +169,17 @@ function getExperience() {
               marginHorizontal: 20,
               marginBottom: -18,
             }}
-            break={index === 3}
           >
-            <Text style={styles.jobTitle}>{job.company}</Text>
+            <Text style={styles.jobTitle}>{key}</Text>
             <Text style={styles.jobTitle}>{data.jobs[key]}</Text>
           </View>
-          {items.map((job) => (
-            <View>
-              <Text style={styles.jobTitle}>{job.role}</Text>
-              <Text style={styles.jobTitle}>{job.date}</Text>
-              <View style={styles.layout.container}>
+          <View style={styles.layout.container}>
+            {items.map((job) => (
+              <View style={styles.layout.subContainer}>
+                <View style={styles.layout.row}>
+                  <Text style={styles.roleTitle}>{job.role}</Text>
+                  <Text style={styles.roleTitle}>{job.date}</Text>
+                </View>
                 {job.description.map((d) => (
                   <ListItem>{d}</ListItem>
                 ))}
@@ -173,14 +190,15 @@ function getExperience() {
                   {job.words.map((w) => w.text).join(" ")}
                 </Text>
               </View>
-            </View>
-          ))}
+            ))}
+          </View>
         </View>
       );
+      index++;
     } else {
       toReturn.push(
         ...items.map((job) => (
-          <View style={{ marginTop: 10 }}>
+          <View style={{ marginTop: 10 }} break={index === 1}>
             <View
               style={{
                 display: "flex",
@@ -212,6 +230,7 @@ function getExperience() {
           </View>
         ))
       );
+      index++;
     }
   });
   return toReturn;
