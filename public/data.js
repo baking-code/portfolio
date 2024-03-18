@@ -282,7 +282,7 @@ export default {
       description: [
         "Hello there! My name is Ben and I am a full stack staff software engineer.",
         "The majority of my recent experiences lie in building complex data-driven applications. The challenge involved in the consumption and presentation of complex data is something that I enjoy.",
-        "My current company Ripjar are a Series-B data intelligence scale up. I joined 2 years into their journey, and it has since grown over 6 times the size. I have led UI development of both their financial crime solution and data analysis platform.",
+        "My current company Ripjar are a Series-B data intelligence scale up. I joined 2 years into their journey, and it has since grown over 6 times the size. I have led development of both their financial crime solution and data analysis platform.",
         "I love playing with technology. Making myself, and others around me, better at what they do is what inspires me. 🎉",
       ],
     },
