@@ -91,7 +91,7 @@ export default {
       date: "09/2019 - 01/2022",
       role: "Technical Lead",
       description: [
-        "Designing new microservices and components",
+        "Designing and building nodejs microservices and components",
         "Planning sprints; requirements gathering and task breakdown",
         "Line management of 5 team members including their mentoring and career progression",
         "Recruitment lead for full-stack and front-end developers",
