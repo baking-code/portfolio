@@ -296,9 +296,7 @@ export default {
   ],
   home: [
     {
-      description: [
-        "Benjamin King - Staff Software Engineer / Engineering Manager"
-      ]
+      description: ["Benjamin King - Software Engineer & Manager"]
     },
     {
       description: [
