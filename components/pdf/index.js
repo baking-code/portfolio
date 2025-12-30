@@ -135,10 +135,25 @@ const PDFDocument = () => (
         </View>
       </View>
       <View style={styles.layout.container}>
-        <Text>{data.home[1].description.join(" ")}</Text>
+        {data.home[1].description.map((para, i) => (
+          <Text
+            key={i}
+            style={{
+              marginBottom: i < data.home[1].description.length - 1 ? 10 : 0
+            }}
+          >
+            {para}
+          </Text>
+        ))}
       </View>
       <Text style={styles.sectionTitle}>Experience</Text>
       {getExperience()}
+      <View style={{ marginTop: 10 }} break={true}>
+        <Text style={styles.sectionTitle}>Skills</Text>
+        <View style={styles.layout.container}>
+          <Text>{getSkills()}</Text>
+        </View>
+      </View>
       <Text style={styles.sectionTitle}>Education</Text>
       <View style={styles.layout.container}>
         <Text>{data.education[0].description.join(" ")}</Text>
@@ -188,10 +203,6 @@ function getExperience() {
             {job.description.map((d, i) => (
               <ListItem key={i}>{d}</ListItem>
             ))}
-            <Text style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}>
-              {"Keywords: "}
-              {job.words.map((w) => w.text).join(" ")}
-            </Text>
           </View>
         </View>
       );
@@ -199,4 +210,36 @@ function getExperience() {
   });
 
   return toReturn;
+}
+
+function getSkills() {
+  const skillsMap = new Map();
+
+  data.experience.forEach((job) => {
+    if (job.words) {
+      job.words.forEach((word) => {
+        if (word.weight >= 10) {
+          if (!skillsMap.has(word.text)) {
+            skillsMap.set(word.text, word.weight);
+          } else {
+            skillsMap.set(
+              word.text,
+              Math.max(skillsMap.get(word.text), word.weight)
+            );
+          }
+        }
+      });
+    }
+  });
+
+  const skills = Array.from(skillsMap.entries())
+    .sort((a, b) => {
+      if (b[1] !== a[1]) {
+        return b[1] - a[1];
+      }
+      return a[0].localeCompare(b[0]);
+    })
+    .map(([text]) => text.charAt(0).toUpperCase() + text.slice(1));
+
+  return skills.join(", ");
 }

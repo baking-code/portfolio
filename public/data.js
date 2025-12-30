@@ -5,10 +5,10 @@ export default {
   experience: [
     {
       words: [
-        { text: "golang", weight: 10 },
-        { text: "automation", weight: 6 },
-        { text: "postgres", weight: 6 },
-        { text: "typescript", weight: 8 },
+        { text: "golang", weight: 20 },
+        { text: "automation", weight: 4 },
+        { text: "postgres", weight: 10 },
+        { text: "typescript", weight: 20 },
         { text: "redis", weight: 4 },
         {
           text: "gcp",
@@ -29,22 +29,21 @@ export default {
     },
     {
       words: [
-        { text: "typescript", weight: 10 },
-        { text: "architecture", weight: 6 },
+        { text: "typescript", weight: 20 },
+        { text: "microservices", weight: 15 },
         { text: "design", weight: 6 },
         {
           text: "kafka",
           weight: 8
         },
-        { text: "events", weight: 4 },
-        { text: "microservices", weight: 4 },
+        { text: "event-driven architecture", weight: 15 },
         {
           text: "distributed systems",
-          weight: 4
+          weight: 15
         },
         {
-          text: "ci/cd",
-          weight: 4
+          text: "CI/CD",
+          weight: 10
         },
         {
           text: "streaming",
@@ -69,12 +68,12 @@ export default {
     {
       words: [
         {
-          text: "leadership",
-          weight: 12
+          text: "technical leadership",
+          weight: 15
         },
         {
           text: "mentoring",
-          weight: 12
+          weight: 15
         },
         {
           text: "ansible",
@@ -82,7 +81,7 @@ export default {
         },
         {
           text: "jenkins",
-          weight: 10
+          weight: 9
         },
         {
           text: "scrum",
@@ -94,11 +93,11 @@ export default {
         },
         {
           text: "opensearch",
-          weight: 6
+          weight: 10
         },
         {
           text: "mongodb",
-          weight: 6
+          weight: 10
         },
         {
           text: "redis",
@@ -145,11 +144,11 @@ export default {
         },
         {
           text: "d3",
-          weight: 10
+          weight: 8
         },
         {
           text: "webgl",
-          weight: 10
+          weight: 8
         },
         {
           text: "jest",
@@ -175,7 +174,7 @@ export default {
       words: [
         {
           text: "asp.net",
-          weight: 10
+          weight: 7
         },
         {
           text: "javascript",
@@ -187,7 +186,7 @@ export default {
         },
         {
           text: "c#",
-          weight: 12
+          weight: 8
         },
         {
           text: "geosystems",
@@ -199,7 +198,7 @@ export default {
         },
         {
           text: "git",
-          weight: 6
+          weight: 10
         }
       ],
       company: "Helyx SIS",
@@ -215,7 +214,7 @@ export default {
       words: [
         {
           text: "java",
-          weight: 14
+          weight: 18
         },
         {
           text: "javascript",
@@ -231,7 +230,7 @@ export default {
         },
         {
           text: "desktop app",
-          weight: 10
+          weight: 9
         },
         {
           text: "c++",
@@ -280,13 +279,12 @@ export default {
         },
         {
           text: "firebase",
-          weight: 10
+          weight: 6
         }
       ],
       company: "Personal Projects",
       date: "projects",
       role: "",
-      pdfBreak: true,
       description: [
         "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go",
         "godash - my first published go package https://github.com/baking-code/godash",
@@ -299,7 +297,7 @@ export default {
   home: [
     {
       description: [
-        "Benjamin King — Staff Software Engineer / Engineering Manager"
+        "Benjamin King - Staff Software Engineer / Engineering Manager"
       ]
     },
     {
@@ -316,11 +314,11 @@ export default {
     },
     {
       description: [
-        "Based near the Malvern Hills in England, I am happily married and enjoy working from home with our two dogs.",
-        "We love exploring the countryside and tasting different cultures.",
-        "I try to maintain fitness with cycling, running, bouldering and yoga.",
-        "Avid follower of football and motorsport, and am a big fan of heavy metal music.",
-        "I compete in Sim Racing events and organised leagues against racers from around the world."
+        "Based near the Malvern Hills in England, I am happily married and enjoy working from home with our two dogs",
+        "We love exploring the countryside and tasting different cultures",
+        "I try to maintain fitness with cycling, running, bouldering and yoga",
+        "Avid follower of football and motorsport, and am a big fan of heavy metal music",
+        "I compete in Sim Racing events and organised leagues against racers from around the world"
       ]
     }
   ],
