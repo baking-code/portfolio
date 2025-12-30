@@ -1,1 +1,2 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Build: `npm i && npm run build`
+Dev: `npm i && npm run dev`
