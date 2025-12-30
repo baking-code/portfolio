@@ -19,10 +19,12 @@ export default {
       date: "10/2024 - present",
       role: "Senior Engineer",
       description: [
-        "Became an IC again at financial scale-up",
-        "Increasing automation techniques for web scraping",
-        "Tranforming enterprise system to multi-tenant SaaS platform",
-        "Improving performance with parallel processing"
+        "IC contributor at high-growth fintech scale-up automating global tax compliance",
+        "Architecting multi-tenant SaaS transformation of enterprise platform serving global clients",
+        "Increased PDF processing throughput by 15x through parallel processing optimization",
+        "Leading automation initiatives for large-scale web scraping and data extraction systems",
+        "Leading product line representing ~10% of company ARR",
+        "Contributing to high-volume transaction processing system handling 15M+ monthly transactions"
       ]
     },
     {
@@ -57,12 +59,11 @@ export default {
       date: "01/2022 - 09/2024",
       role: "Staff Engineer",
       description: [
-        "Holistic technical responsibility over engineering teams and processes",
-        "Coordinating business, product and engineering roadmaps with senior stakeholders",
-        "Designing and building next iteration of financial crime detection product",
-        "Fleshing out system level tests and fitness functions",
-        "Improving developer experience and efficiency",
-        "Revamped test automation and CI pipeline from Jenkins to docker and Github Actions"
+        "Owned technical strategy and architecture across multiple engineering teams at financial crime detection SaaS product",
+        "Drove engineering excellence initiatives: modernized CI/CD pipeline, established system-level testing and fitness functions",
+        "Aligned engineering, product, and business roadmaps with C-suite and senior stakeholders",
+        "Raised technical bar across teams through code reviews, design feedback, and architecture decision records",
+        "Improved team velocity and developer experience through tooling, automation, and process improvements"
       ]
     },
     {
@@ -113,11 +114,11 @@ export default {
       role: "Technical Lead",
       pdfBreak: true,
       description: [
-        "Designing and building nodejs microservices and components",
-        "Planning sprints; requirements gathering and task breakdown",
-        "Line management of 5 team members including their mentoring and career progression",
-        "Recruitment lead for full-stack and front-end developers",
-        "Responsibility for application with 40,000 users in the world’s biggest financial institutions"
+        "Led engineering team of 5 through full product development lifecycle, including performance management, career development, and 1:1s",
+        "Owned product serving 40,000 users at world's largest financial institutions; responsible for roadmap, sprint planning, and delivery",
+        "Designed and built microservices architecture for high-scale data processing and search",
+        "Recruitment lead: shaped hiring process improvements, conducted 50+ interviews, hired full-stack and front-end developers",
+        "Mentored team on technical growth, code quality, and engineering best practices"
       ]
     },
     {
@@ -163,12 +164,11 @@ export default {
       date: "04/2016 - 09/2019",
       role: "Senior Front-End Engineer",
       description: [
-        "Design, development, testing and deployment of complex data driven applications",
-        "Promotion of leading web technologies including React, webpack and ES6",
-        "Liaising with UX designers",
-        "Involvement with initial release of network intelligence application",
-        "Development lead of financial crime product's user interface",
-        "Upskilling others in React, version control and modern javascript"
+        "Led front-end development for financial crime detection product used by major global institutions",
+        "Built complex data visualization interfaces for network intelligence applications",
+        "Championed adoption of modern web technologies across engineering organization",
+        "Collaborated with UX designers to transform complex data problems into intuitive user experiences",
+        "Mentored junior engineers on front-end best practices and modern development workflows"
       ]
     },
     {
@@ -206,9 +206,9 @@ export default {
       date: "07/2015 - 04/2016",
       role: "Software Developer",
       description: [
-        "Software developer integrating geo capability into existing systems",
-        "Ported old VB6 system to use modern technologies",
-        "Introduced version control to company"
+        "Integrated geospatial capabilities into existing client systems",
+        "Modernized legacy codebase to contemporary technology stack",
+        "Introduced version control practices to improve team collaboration and code quality"
       ]
     },
     {
@@ -246,10 +246,10 @@ export default {
       date: "06/2012 - 07/2015",
       role: "Graduate Software Developer",
       description: [
-        "Built upon existing Java framework for analysis of network graphs",
-        "Followed best practices for version control and continuous deployment",
-        "Research project analysing website content using Natural Language Processing",
-        "Curated queryable data platform for rich scenario based content"
+        "Extended framework for network graph analysis on intelligence applications",
+        "Implemented CI/CD best practices for version control and automated deployment",
+        "Developed NLP research project for website content analysis and classification",
+        "Built queryable data platform for scenario-based intelligence content"
       ]
     },
     {
@@ -298,14 +298,15 @@ export default {
   ],
   home: [
     {
-      description: ["Benjamin King, staff software engineer"]
+      description: [
+        "Benjamin King — Staff Software Engineer / Engineering Manager"
+      ]
     },
     {
       description: [
-        "I'm Ben, an experienced software engineer who thrives on building impactful products.",
-        "I specialize in transforming complex data challenges into elegant, intuitive business solutions that drive real value.",
-        "At Fonoa, a financial scale-up, I joined 4 years in and have been instrumental in doubling ARR year over year.",
-        "What drives me? Leveraging technology to elevate both my work and the capabilities of those around me."
+        "I'm Ben, a software engineer and technical leader with 10+ years building high-impact products at scale. I specialize in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
+        "I've led engineering teams from 4 to 9 people, mentored dozens of engineers, and owned products serving 40,000+ users at major financial institutions. At Fonoa, I contribute to products representing 40% of company ARR, processing 15M+ transactions monthly.",
+        "What drives me is building systems that matter and growing the people around me. I thrive at the intersection of technical depth and leadership: architecting scalable solutions, raising the technical bar through mentorship, and aligning engineering with business outcomes."
       ]
     }
   ],
@@ -315,11 +316,11 @@ export default {
     },
     {
       description: [
-        "Based near the Malvern Hills in England, I am happily married and enjoy working from home with our little dog 🐾",
-        "We love exploring the countryside and tasting different cultures ✈️",
-        "I try to maintain fitness with cycling, running, bouldering and yoga 🧘",
-        "Avid follower of football and motorsport, and am a big fan of heavy metal music 🤘",
-        "I compete in Sim Racing events and organised leagues against of racers from around the world 🏁"
+        "Based near the Malvern Hills in England, I am happily married and enjoy working from home with our two dogs.",
+        "We love exploring the countryside and tasting different cultures.",
+        "I try to maintain fitness with cycling, running, bouldering and yoga.",
+        "Avid follower of football and motorsport, and am a big fan of heavy metal music.",
+        "I compete in Sim Racing events and organised leagues against racers from around the world."
       ]
     }
   ],
