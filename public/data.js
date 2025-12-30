@@ -111,6 +111,7 @@ export default {
       company: "Ripjar",
       date: "09/2019 - 01/2022",
       role: "Technical Lead",
+      pdfBreak: true,
       description: [
         "Designing and building nodejs microservices and components",
         "Planning sprints; requirements gathering and task breakdown",
@@ -285,6 +286,7 @@ export default {
       company: "Personal Projects",
       date: "projects",
       role: "",
+      pdfBreak: true,
       description: [
         "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go",
         "godash - my first published go package https://github.com/baking-code/godash",

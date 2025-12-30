@@ -6,7 +6,7 @@ import {
   Link,
   View,
   Document,
-  StyleSheet,
+  StyleSheet
 } from "@react-pdf/renderer";
 import { each, groupBy } from "lodash";
 import { theme } from "../../tailwind.config";
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     // backgroundColor: "#E4E4E4",
-    marginVertical: 50,
+    marginVertical: 50
   },
   header: {
     backgroundColor: primaryColor,
@@ -33,20 +33,20 @@ const styles = StyleSheet.create({
     paddingHorizontal: 30,
     paddingVertical: 30,
     marginBottom: 10,
-    marginTop: -50,
+    marginTop: -50
   },
   title: {
     textAlign: "left",
     color: whiteTextColor,
     fontSize: 40,
     fontWeight: "bold",
-    flex: 3,
+    flex: 3
   },
   subHeader: {
     display: "flex",
     flexDirection: "column",
     alignItems: "flex-end",
-    flex: 2,
+    flex: 2
   },
   subtitle: {
     textAlign: "right",
@@ -54,24 +54,24 @@ const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: "bold",
     display: "flex",
-    flexDirection: "row",
+    flexDirection: "row"
   },
   sectionTitle: {
     color: primaryColor,
     textTransform: "capitalize",
     fontSize: 18,
-    marginHorizontal: 20,
+    marginHorizontal: 20
   },
   jobTitle: {
     color: textColor,
-    fontSize: 12,
+    fontSize: 12
   },
   roleTitle: {
     color: textColor,
     fontSize: 11,
     fontWeight: "bold",
     marginBottom: 5,
-    marginRight: 5,
+    marginRight: 5
   },
   layout: {
     container: {
@@ -84,21 +84,21 @@ const styles = StyleSheet.create({
       borderBottomRightRadius: 5,
       borderBottomLeftRadius: 5,
       padding: 20,
-      margin: 20,
+      margin: 20
     },
     subContainer: {
       fontSize: 12,
       padding: 5,
-      margin: 5,
+      margin: 5
     },
     row: {
       display: "flex",
-      flexDirection: "row",
+      flexDirection: "row"
     },
     bullet: {
-      height: "100%",
-    },
-  },
+      height: "100%"
+    }
+  }
 });
 
 const ListItem = ({ children }) => {
@@ -155,83 +155,48 @@ export default PDFDocument;
 function getExperience() {
   const expByKey = groupBy(data.experience, "company");
   const toReturn = [];
-  let index = 0;
+
   each(expByKey, (items, key) => {
-    console.log(items);
-    if (data.jobs[key]) {
+    items.forEach((job, jobIndex) => {
+      const companyDateRange = data.jobs[key] || job.date;
+      const displayCompany = key;
+      const displayRole = job.role || "";
+
       toReturn.push(
-        <View style={{ marginTop: 10 }}>
+        <View
+          style={{ marginTop: 10 }}
+          key={`${key}-${jobIndex}`}
+          break={job.pdfBreak}
+        >
           <View
             style={{
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-between",
               marginHorizontal: 20,
-              marginBottom: -18,
+              marginBottom: -18
             }}
           >
-            <Text style={styles.jobTitle}>{key}</Text>
-            <Text style={styles.jobTitle}>{data.jobs[key]}</Text>
+            <Text style={styles.jobTitle}>
+              {displayCompany}
+              {displayRole && " - "}
+              {displayRole}
+            </Text>
+            <Text style={styles.jobTitle}>{job.date || companyDateRange}</Text>
           </View>
           <View style={styles.layout.container}>
-            {items.map((job) => (
-              <View style={styles.layout.subContainer}>
-                <View style={styles.layout.row}>
-                  <Text style={styles.roleTitle}>{job.role}</Text>
-                  <Text style={styles.roleTitle}>{job.date}</Text>
-                </View>
-                {job.description.map((d) => (
-                  <ListItem>{d}</ListItem>
-                ))}
-                <Text
-                  style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}
-                >
-                  {"Keywords: "}
-                  {job.words.map((w) => w.text).join(" ")}
-                </Text>
-              </View>
+            {job.description.map((d, i) => (
+              <ListItem key={i}>{d}</ListItem>
             ))}
+            <Text style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}>
+              {"Keywords: "}
+              {job.words.map((w) => w.text).join(" ")}
+            </Text>
           </View>
         </View>
       );
-      index++;
-    } else {
-      toReturn.push(
-        ...items.map((job) => (
-          <View style={{ marginTop: 10 }} break={index === 1}>
-            <View
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "space-between",
-                marginHorizontal: 20,
-                marginBottom: -18,
-              }}
-              break={index === 3}
-            >
-              <Text style={styles.jobTitle}>
-                {job.company}
-                {job.role && " - "}
-                {job.role}
-              </Text>
-              <Text style={styles.jobTitle}>{job.role && job.date}</Text>
-            </View>
-            <View style={styles.layout.container}>
-              {job.description.map((d) => (
-                <ListItem>{d}</ListItem>
-              ))}
-              <Text
-                style={{ fontSize: 10, fontStyle: "italic", paddingTop: 10 }}
-              >
-                {"Keywords: "}
-                {job.words.map((w) => w.text).join(" ")}
-              </Text>
-            </View>
-          </View>
-        ))
-      );
-      index++;
-    }
+    });
   });
+
   return toReturn;
 }
