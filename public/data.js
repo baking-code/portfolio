@@ -299,7 +299,7 @@ export default {
     },
     {
       description: [
-        "I'm Ben, a software engineer and technical leader with 10+ years building high-impact products at scale. I specialize in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
+        "I'm Ben, an Engineering Manager and technical leader with 10+ years building high-impact products at scale. I specialize in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
         "I've led engineering teams from 4 to 9 people, mentored dozens of engineers, and owned products serving 40,000+ users at major financial institutions. At Fonoa, I contribute to products representing 40% of company ARR, processing 15M+ transactions monthly.",
         "What drives me is building systems that matter and growing the people around me. I thrive at the intersection of technical depth and leadership: architecting scalable solutions, raising the technical bar through mentorship, and aligning engineering with business outcomes."
       ]
