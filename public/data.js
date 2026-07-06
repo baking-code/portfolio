@@ -9,7 +9,7 @@ export default {
         { text: "automation", weight: 4 },
         { text: "postgres", weight: 10 },
         { text: "typescript", weight: 20 },
-        { text: "redis", weight: 4 },
+        { text: "leadership", weight: 4 },
         {
           text: "gcp",
           weight: 8
@@ -17,13 +17,12 @@ export default {
       ],
       company: "Fonoa",
       date: "10/2024 - present",
-      role: "Senior Engineer",
+      role: "Senior Engineer / Engineering Manager",
       description: [
-        "IC contributor at high-growth fintech scale-up automating global tax compliance",
+        "IC turned EM at high-growth fintech scale-up automating global tax compliance",
         "Architecting multi-tenant SaaS transformation of enterprise platform serving global clients",
-        "Increased PDF processing throughput by 15x through parallel processing optimization",
         "Leading automation initiatives for large-scale web scraping and data extraction systems",
-        "Leading product line representing ~10% of company ARR",
+        "Leading product lines representing ~40% of company ARR",
         "Contributing to high-volume transaction processing system handling 15M+ monthly transactions"
       ]
     },
