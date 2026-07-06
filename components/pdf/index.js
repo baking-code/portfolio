@@ -115,7 +115,7 @@ const ListItem = ({ children }) => {
 // Create Document Component
 const PDFDocument = () => (
   <Document>
-    <Page size="A4" style={styles.page} pageLayout={"twoColumnLeft"}>
+    <Page size="A4" style={styles.page}>
       <View style={styles.header}>
         <Text style={styles.title}>Benjamin King</Text>
         <View style={styles.subHeader}>
@@ -129,9 +129,10 @@ const PDFDocument = () => (
             benjaminallanking.com
           </Link>
           <Link src="https://github.com/baking-code" style={styles.subtitle}>
-            GitHub
+            github.com/baking-code
           </Link>
-          <Text style={styles.subtitle}>07855535254</Text>
+          <Text style={styles.subtitle}>+44 7855 535254</Text>
+          <Text style={styles.subtitle}>Malvern, UK</Text>
         </View>
       </View>
       <View style={styles.layout.container}>
@@ -154,13 +155,17 @@ const PDFDocument = () => (
           <Text>{getSkills()}</Text>
         </View>
       </View>
-      <Text style={styles.sectionTitle}>Education</Text>
-      <View style={styles.layout.container}>
-        <Text>{data.education[0].description.join(" ")}</Text>
+      <View>
+        <Text style={styles.sectionTitle}>Education</Text>
+        <View style={styles.layout.container}>
+          <Text>{data.education[0].description.join(" ")}</Text>
+        </View>
       </View>
-      <Text style={styles.sectionTitle}>Interests</Text>
-      <View style={styles.layout.container}>
-        <Text>{data.about[1].description.join(". ")}</Text>
+      <View>
+        <Text style={styles.sectionTitle}>Interests</Text>
+        <View style={styles.layout.container}>
+          <Text>{data.about[1].description.join(". ")}</Text>
+        </View>
       </View>
     </Page>
   </Document>
@@ -187,7 +192,6 @@ function getExperience() {
             style={{
               display: "flex",
               flexDirection: "row",
-              justifyContent: "space-between",
               marginHorizontal: 20,
               marginBottom: -18
             }}
@@ -197,7 +201,9 @@ function getExperience() {
               {displayRole && " - "}
               {displayRole}
             </Text>
-            <Text style={styles.jobTitle}>{job.date || companyDateRange}</Text>
+            <Text style={[styles.jobTitle, { marginLeft: 10 }]}>
+              {job.date || companyDateRange}
+            </Text>
           </View>
           <View style={styles.layout.container}>
             {job.description.map((d, i) => (

@@ -311,7 +311,7 @@ export default {
     },
     {
       description: [
-        "Based near the Malvern Hills in England, I am happily married and enjoy working from home with our two dogs",
+        "Based near the Malvern Hills in England, I enjoy working from home with our two dogs",
         "We love exploring the countryside and tasting different cultures",
         "I try to maintain fitness with cycling, running, bouldering and yoga",
         "Avid follower of football and motorsport, and am a big fan of heavy metal music",
