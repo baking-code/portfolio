@@ -9,21 +9,17 @@ export default {
         { text: "automation", weight: 4 },
         { text: "postgres", weight: 10 },
         { text: "typescript", weight: 20 },
-        { text: "leadership", weight: 4 },
-        {
-          text: "gcp",
-          weight: 8
-        }
+        { text: "leadership", weight: 4 }
       ],
       company: "Fonoa",
       date: "10/2024 - present",
-      role: "Senior Engineer / Engineering Manager",
+      role: "Engineering Manager",
       description: [
-        "IC turned EM at high-growth fintech scale-up automating global tax compliance",
-        "Architecting multi-tenant SaaS transformation of enterprise platform serving global clients",
-        "Leading automation initiatives for large-scale web scraping and data extraction systems",
+        "IC turned EM leading engineering at a high-growth fintech scale-up automating global tax compliance",
+        "Leading multi-tenant SaaS transformation of enterprise platform serving global clients",
+        "Managing team delivering large-scale web scraping and data extraction automation",
         "Leading product lines representing ~40% of company ARR",
-        "Contributing to high-volume transaction processing system handling 15M+ monthly transactions"
+        "Overseeing engineering for high-volume processing system handling 5M+ monthly transactions"
       ]
     },
     {
