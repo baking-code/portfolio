@@ -27,10 +27,11 @@ jobs:
           username: ${{ secrets.DROPLET_USER }}
           key: ${{ secrets.DROPLET_SSH_KEY }}
           script: |
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             cd ~/portfolio
             git checkout master
             git pull origin master
-            pwd
             npm ci
             npm run build
             pm2 restart portfolio || pm2 start npm --name portfolio -- start
