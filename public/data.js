@@ -17,7 +17,8 @@ export default {
       description: [
         "IC turned EM leading engineering at a high-growth fintech scale-up automating global tax compliance",
         "Leading multi-tenant SaaS transformation of enterprise platform serving global clients",
-        "Managing team delivering large-scale web scraping and data extraction automation",
+        "Overhauled ticketing system and built an agent to automatically categorize engineering work, giving the business visibility into effort allocation",
+        "Ran a hackathon empowering the team to build agents that auto-resolve common issues, and shared techniques org-wide",
         "Leading product lines representing ~40% of company ARR",
         "Overseeing engineering for high-volume processing system handling 5M+ monthly transactions"
       ]
