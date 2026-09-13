@@ -5,7 +5,7 @@ on:
     branches: [master]
 
 jobs:
-  build-check:
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -15,12 +15,30 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build
+      - run: npm ci --omit=dev
+      - run: tar -czf build.tar.gz .next public node_modules
+      - uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: build.tar.gz
+          retention-days: 1
 
   deploy:
-    needs: build-check
+    needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to server
+      - uses: actions/download-artifact@v4
+        with:
+          name: build-output
+      - name: Copy build to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DROPLET_HOST }}
+          username: ${{ secrets.DROPLET_USER }}
+          key: ${{ secrets.DROPLET_SSH_KEY }}
+          source: "build.tar.gz"
+          target: "~/"
+      - name: Deploy on server
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.DROPLET_HOST }}
@@ -32,7 +50,8 @@ jobs:
             cd ~/portfolio
             git checkout master
             git pull origin master
-            npm ci
-            npm run build
+            rm -rf .next node_modules public
+            tar -xzf ~/build.tar.gz -C ~/portfolio
+            rm -f ~/build.tar.gz
             pm2 restart portfolio || pm2 start npm --name portfolio -- start
             echo "Deploy complete"
