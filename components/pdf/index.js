@@ -23,17 +23,17 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: "column",
     // backgroundColor: "#E4E4E4",
-    marginVertical: 50
+    marginVertical: 30
   },
   header: {
     backgroundColor: primaryColor,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 30,
-    paddingVertical: 30,
+    paddingHorizontal: 20,
+    paddingVertical: 20,
     marginBottom: 10,
-    marginTop: -50
+    marginTop: -30
   },
   title: {
     textAlign: "left",
@@ -59,12 +59,12 @@ const styles = StyleSheet.create({
   sectionTitle: {
     color: primaryColor,
     textTransform: "capitalize",
-    fontSize: 18,
+    fontSize: 14,
     marginHorizontal: 20
   },
   jobTitle: {
     color: textColor,
-    fontSize: 12
+    fontSize: 10
   },
   roleTitle: {
     color: textColor,
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   layout: {
     container: {
       color: textColor,
-      fontSize: 12,
+      fontSize: 10,
       borderColor: primaryColor,
       borderWidth: "2",
       borderTopLeftRadius: 5,
@@ -97,6 +97,24 @@ const styles = StyleSheet.create({
     },
     bullet: {
       height: "100%"
+    },
+    keywordsRow: {
+      display: "flex",
+      flexDirection: "row",
+      flexWrap: "wrap",
+      borderColor: primaryColor,
+      borderWidth: "2",
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 5,
+      borderBottomRightRadius: 5,
+      borderBottomLeftRadius: 5,
+      marginHorizontal: 20,
+      marginBottom: 20,
+      padding: 5
+    },
+    keywordItem: {
+      fontSize: 10,
+      marginHorizontal: 5
     }
   }
 });
@@ -147,14 +165,14 @@ const PDFDocument = () => (
           </Text>
         ))}
       </View>
-      <Text style={styles.sectionTitle}>Experience</Text>
-      {getExperience()}
-      <View style={{ marginTop: 10 }} break={true}>
+      <View style={{ marginTop: 10 }}>
         <Text style={styles.sectionTitle}>Skills</Text>
         <View style={styles.layout.container}>
           <Text>{getSkills()}</Text>
         </View>
       </View>
+      <Text style={styles.sectionTitle}>Experience</Text>
+      {getExperience()}
       <View>
         <Text style={styles.sectionTitle}>Education</Text>
         <View style={styles.layout.container}>
@@ -181,6 +199,7 @@ function getExperience() {
       const companyDateRange = data.jobs[key] || job.date;
       const displayCompany = key;
       const displayRole = job.role || "";
+      const isAbbreviated = !!job.pdfAbbreviate;
 
       toReturn.push(
         <View
@@ -193,7 +212,7 @@ function getExperience() {
               display: "flex",
               flexDirection: "row",
               marginHorizontal: 20,
-              marginBottom: -18
+              marginBottom: isAbbreviated ? 5 : -18
             }}
           >
             <Text style={styles.jobTitle}>
@@ -205,11 +224,13 @@ function getExperience() {
               {job.date || companyDateRange}
             </Text>
           </View>
-          <View style={styles.layout.container}>
-            {job.description.map((d, i) => (
-              <ListItem key={i}>{d}</ListItem>
-            ))}
-          </View>
+          {!isAbbreviated && (
+            <View style={styles.layout.container}>
+              {job.description.map((d, i) => (
+                <ListItem key={i}>{d}</ListItem>
+              ))}
+            </View>
+          )}
         </View>
       );
     });

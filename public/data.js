@@ -200,6 +200,7 @@ export default {
       company: "Helyx SIS",
       date: "07/2015 - 04/2016",
       role: "Software Developer",
+      pdfAbbreviate: true,
       description: [
         "Integrated geospatial capabilities into existing client systems",
         "Modernized legacy codebase to contemporary technology stack",
@@ -240,6 +241,7 @@ export default {
       company: "BAE Systems Detica",
       date: "06/2012 - 07/2015",
       role: "Graduate Software Developer",
+      pdfAbbreviate: true,
       description: [
         "Extended framework for network graph analysis on intelligence applications",
         "Implemented CI/CD best practices for version control and automated deployment",
