@@ -6,21 +6,23 @@ export default {
     {
       words: [
         { text: "golang", weight: 20 },
-        { text: "automation", weight: 4 },
+        { text: "automation", weight: 10 },
         { text: "postgres", weight: 10 },
         { text: "typescript", weight: 20 },
-        { text: "leadership", weight: 4 }
+        { text: "leadership", weight: 10 }
       ],
       company: "Fonoa",
       date: "10/2024 - present",
       role: "Engineering Manager",
       description: [
         "IC turned EM leading engineering at a high-growth fintech scale-up automating global tax compliance",
-        "Leading multi-tenant SaaS transformation of enterprise platform serving global clients",
-        "Overhauled ticketing system and built an agent to automatically categorize engineering work, giving the business visibility into effort allocation",
-        "Ran a hackathon empowering the team to build agents that auto-resolve common issues, and shared techniques org-wide",
         "Leading product lines representing ~40% of company ARR",
-        "Overseeing engineering for high-volume processing system handling 5M+ monthly transactions"
+        "Owner of high-volume processing system handling 15M+ monthly transactions at 99.95% 1s SLA",
+        "Collaborating on product and company AI strategy with Product, Engineering, Sales and Leadership teams",
+        "Lead multi-tenant SaaS transformation of enterprise platform serving global clients",
+        "Overhauled ticketing system and built an agent to automatically categorise engineering work, giving the business visibility into effort allocation",
+        "Ran a hackathon empowering the team to build agents that auto-resolve common issues, and shared techniques org-wide",
+        "Developed tooling to increase engineering efficiency, automatically updating libraries and documentation"
       ]
     },
     {
@@ -38,8 +40,8 @@ export default {
           weight: 15
         },
         {
-          text: "CI/CD",
-          weight: 10
+          text: "ci/cd",
+          weight: 7
         },
         {
           text: "streaming",
@@ -47,7 +49,7 @@ export default {
         },
         {
           text: "github actions",
-          weight: 4
+          weight: 10
         }
       ],
       company: "Ripjar",
@@ -55,10 +57,12 @@ export default {
       role: "Staff Engineer",
       description: [
         "Owned technical strategy and architecture across multiple engineering teams at financial crime detection SaaS product",
-        "Drove engineering excellence initiatives: modernized CI/CD pipeline, established system-level testing and fitness functions",
+        "Led SaaS transformation of legacy banking product, now used by over 400 tenants",
+        "Drove engineering excellence initiatives: modernised CI/CD pipeline, established system-level testing and fitness functions",
         "Aligned engineering, product, and business roadmaps with C-suite and senior stakeholders",
         "Raised technical bar across teams through code reviews, design feedback, and architecture decision records",
-        "Improved team velocity and developer experience through tooling, automation, and process improvements"
+        "Improved team velocity and developer experience through tooling, automation, and process improvements",
+        "Designed and implemented propietary graph database using existing no-SQL technologies"
       ]
     },
     {
@@ -77,7 +81,7 @@ export default {
         },
         {
           text: "jenkins",
-          weight: 9
+          weight: 4
         },
         {
           text: "scrum",
@@ -148,11 +152,11 @@ export default {
         },
         {
           text: "jest",
-          weight: 6
+          weight: 8
         },
         {
           text: "selenium",
-          weight: 6
+          weight: 7
         }
       ],
       company: "Ripjar",
@@ -160,8 +164,8 @@ export default {
       role: "Senior Front-End Engineer",
       description: [
         "Led front-end development for financial crime detection product used by major global institutions",
-        "Built complex data visualization interfaces for network intelligence applications",
-        "Championed adoption of modern web technologies across engineering organization",
+        "Built complex data visualisation interfaces for network intelligence applications",
+        "Championed adoption of modern web technologies across engineering organisation",
         "Collaborated with UX designers to transform complex data problems into intuitive user experiences",
         "Mentored junior engineers on front-end best practices and modern development workflows"
       ]
@@ -182,7 +186,7 @@ export default {
         },
         {
           text: "c#",
-          weight: 8
+          weight: 6
         },
         {
           text: "geosystems",
@@ -203,7 +207,7 @@ export default {
       pdfAbbreviate: true,
       description: [
         "Integrated geospatial capabilities into existing client systems",
-        "Modernized legacy codebase to contemporary technology stack",
+        "Modernised legacy codebase to contemporary technology stack",
         "Introduced version control practices to improve team collaboration and code quality"
       ]
     },
@@ -215,7 +219,7 @@ export default {
         },
         {
           text: "javascript",
-          weight: 6
+          weight: 8
         },
         {
           text: "network graph",
@@ -227,11 +231,11 @@ export default {
         },
         {
           text: "desktop app",
-          weight: 9
+          weight: 6
         },
         {
           text: "c++",
-          weight: 8
+          weight: 4
         },
         {
           text: "neo4j",
@@ -284,11 +288,11 @@ export default {
       date: "projects",
       role: "",
       description: [
+        "recipeasy - web app to share recipes with family",
+        "portfolio - this website/PDF, using next.js, tailwind css, react pdf",
         "golang - https://github.com/baking-code?tab=repositories&q=&type=&language=go",
         "godash - my first published go package https://github.com/baking-code/godash",
-        "AWS - working towards developer certification",
-        "portfolio - this website/PDF, using next.js, tailwind css, react pdf",
-        "recipeasy - web app to share recipes using firebase as a data store"
+        "AWS - studied for developer certification"
       ]
     }
   ],
@@ -298,8 +302,9 @@ export default {
     },
     {
       description: [
-        "I'm Ben, an Engineering Manager and technical leader with 10+ years building high-impact products at scale. I specialize in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
-        "I've led engineering teams from 4 to 9 people, mentored dozens of engineers, and owned products serving 40,000+ users at major financial institutions. At Fonoa, I contribute to products representing 40% of company ARR, processing 15M+ transactions monthly.",
+        "I'm Ben, an Engineering Manager and technical leader with 10+ years experience building high-impact products at scale. I specialise in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
+        "I have led engineering teams, mentored dozens of engineers, and have owned products serving 40,000+ users at major financial institutions. At Fonoa, I am responsible for products representing 40% of company ARR, processing 15M+ transactions monthly.",
+        "I am comfortable running 1:1s, contributing to hiring and performance reviews, and facilitating architectural decisions with the team; as well as rolling up sleeves on complex distributed systems design.",
         "What drives me is building systems that matter and growing the people around me. I thrive at the intersection of technical depth and leadership: architecting scalable solutions, raising the technical bar through mentorship, and aligning engineering with business outcomes."
       ]
     }
@@ -310,11 +315,11 @@ export default {
     },
     {
       description: [
-        "Based near the Malvern Hills in England, I enjoy working from home with our two dogs",
+        "Based near the Malvern Hills in England, I enjoy working from home with my wife and our two dogs",
         "We love exploring the countryside and tasting different cultures",
         "I try to maintain fitness with cycling, running, bouldering and yoga",
         "Avid follower of football and motorsport, and am a big fan of heavy metal music",
-        "I compete in Sim Racing events and organised leagues against racers from around the world"
+        "I compete in Sim Racing events and organised leagues against racers from around the world."
       ]
     }
   ],

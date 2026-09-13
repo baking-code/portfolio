@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
       borderTopRightRadius: 5,
       borderBottomRightRadius: 5,
       borderBottomLeftRadius: 5,
-      padding: 20,
+      padding: 10,
       margin: 20
     },
     subContainer: {
@@ -221,7 +221,7 @@ function getExperience() {
               {displayRole}
             </Text>
             <Text style={[styles.jobTitle, { marginLeft: 10 }]}>
-              {job.date || companyDateRange}
+              {job.role && (job.date || companyDateRange)}
             </Text>
           </View>
           {!isAbbreviated && (
@@ -245,7 +245,7 @@ function getSkills() {
   data.experience.forEach((job) => {
     if (job.words) {
       job.words.forEach((word) => {
-        if (word.weight >= 10) {
+        if (word.weight >= 8) {
           if (!skillsMap.has(word.text)) {
             skillsMap.set(word.text, word.weight);
           } else {
@@ -259,14 +259,7 @@ function getSkills() {
     }
   });
 
-  const skills = Array.from(skillsMap.entries())
-    .sort((a, b) => {
-      if (b[1] !== a[1]) {
-        return b[1] - a[1];
-      }
-      return a[0].localeCompare(b[0]);
-    })
-    .map(([text]) => text.charAt(0).toUpperCase() + text.slice(1));
+  const skills = Array.from(skillsMap.keys()).sort();
 
   return skills.join(", ");
 }
