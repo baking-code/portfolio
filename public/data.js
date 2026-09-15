@@ -302,7 +302,7 @@ export default {
     },
     {
       description: [
-        "I'm Ben, an Engineering Manager and technical leader with 10+ years experience building high-impact products at scale. I specialise in transforming complex data challenges into elegant business solutions while leading teams and driving engineering excellence.",
+        "I'm Ben, an Engineering Manager and technical leader with 10+ years experience building high-impact products at scale. I specialise in transforming complex data challenges into elegant business solutions whilst leading teams and driving engineering excellence.",
         "I have led engineering teams, mentored dozens of engineers, and have owned products serving 40,000+ users at major financial institutions. At Fonoa, I am responsible for products representing 40% of company ARR, processing 15M+ transactions monthly.",
         "I am comfortable running 1:1s, contributing to hiring and performance reviews, and facilitating architectural decisions with the team; as well as rolling up sleeves on complex distributed systems design.",
         "What drives me is building systems that matter and growing the people around me. I thrive at the intersection of technical depth and leadership: architecting scalable solutions, raising the technical bar through mentorship, and aligning engineering with business outcomes."
